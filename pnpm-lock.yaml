@@ -1,0 +1,17 @@
+lockfileVersion: '6.1'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+importers:
+
+  .: {}
+
+  headless-ui:
+    dependencies:
+      '@dtg-examples/tokens':
+        specifier: workspace:^
+        version: link:../tokens
+
+  tokens: {}

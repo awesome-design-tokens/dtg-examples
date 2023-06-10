@@ -1,0 +1,15 @@
+{
+  "name": "@dtg-examples/headless-ui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Evgeny Khoroshilov",
+  "license": "MIT",
+  "dependencies": {
+    "@dtg-examples/tokens": "workspace:^"
+  }
+}
