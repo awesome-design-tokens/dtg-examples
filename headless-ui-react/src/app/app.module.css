@@ -1,4 +1,24 @@
 .root {
   width: 60vw;
-  max-width: 1200px;
+  max-width: 800px;
+}
+
+.main {
+  display: flex;
+  flex-flow: column-reverse;
+  align-items: stretch;
+}
+
+@media (min-width: 780px) {
+  .main {
+    flex-flow: row-reverse;
+  }
+}
+
+.controls {
+  flex: 1 1 60%;
+}
+
+.data {
+  flex: 1 1 40%;
 }
