@@ -1,8 +1,18 @@
-const Info = () => {
+export interface InfoProps {
+  city: string;
+  sky: string;
+  temp: number;
+}
+
+const Info = (props: InfoProps) => {
+  const { city, sky, temp } = props;
+
   return (
     <section>
-      <h2>Mega City 12</h2>
-      <h3>Snow: -15°C</h3>
+      <h2>{city}</h2>
+      <h3>
+        {sky}: {temp}°C
+      </h3>
     </section>
   );
 };
