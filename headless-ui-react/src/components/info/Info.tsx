@@ -1,17 +1,19 @@
+import WEATHER, { WeatherCodes } from '../../data/codes';
+
 export interface InfoProps {
   city: string;
-  sky: string;
+  code: WeatherCodes;
   temp: number;
 }
 
 const Info = (props: InfoProps) => {
-  const { city, sky, temp } = props;
+  const { city, code, temp } = props;
 
   return (
     <section>
       <h2>{city}</h2>
       <h3>
-        {sky}: {temp}°C
+        {WEATHER[code]}: {temp}°C
       </h3>
     </section>
   );

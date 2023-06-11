@@ -6,38 +6,22 @@ import { Selector } from '../components/selector/Selector';
 
 import styles from './app.module.css';
 
-const items = [
-  {
-    uid: '111',
-    value: '1',
-    dataPrimary: 'Mega City 11',
-    dataSecondary: 'Snow, -15°C',
-  },
-  {
-    uid: '222',
-    value: '2',
-    dataPrimary: 'Mega City 13',
-    dataSecondary: 'Fog, 2°C',
-  },
-  {
-    uid: '333',
-    value: '3',
-    dataPrimary: 'Severed Grounds',
-    dataSecondary: 'Sun, 44°C',
-  },
-];
+import data from '../data/data';
 
 const App = () => {
+  const current = data[1];
+
   return (
     <div className={styles.root}>
       <Header />
+
       <main className={styles.main}>
         <div className={styles.controls}>
-          <Info city="Liberty Pods" sky="Heavy Rain" temp={7} />
+          <Info city={current.city} code={current.code} temp={current.temp} />
           <Selector
-            value="2"
+            value={current.uid}
             name="cities"
-            items={items}
+            items={data}
             onSelect={(value) => {
               console.log('Selection', value);
             }}

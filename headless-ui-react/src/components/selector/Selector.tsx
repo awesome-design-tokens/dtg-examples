@@ -1,5 +1,7 @@
 import { RadioGroup } from '@headlessui/react';
 
+import WEATHER, { WeatherCodes } from '../../data/codes';
+
 export interface SelectorProps {
   name: string;
   value: string;
@@ -9,9 +11,9 @@ export interface SelectorProps {
 
 export interface SelectorItemProps {
   uid: string;
-  value: string;
-  dataPrimary: string;
-  dataSecondary?: string;
+  city: string;
+  code: WeatherCodes;
+  temp: number;
 }
 
 const Selector = (props: SelectorProps) => {
@@ -19,9 +21,9 @@ const Selector = (props: SelectorProps) => {
 
   return (
     <RadioGroup value={value} onChange={onSelect} name={name}>
-      {items.map(({ uid, value, dataPrimary, dataSecondary }) => (
-        <RadioGroup.Option key={uid} value={value}>
-          {dataPrimary}
+      {items.map(({ uid, city, code, temp }) => (
+        <RadioGroup.Option key={uid} value={uid}>
+          {city}, {WEATHER[code]}: {temp}°C
         </RadioGroup.Option>
       ))}
     </RadioGroup>
