@@ -1,4 +1,4 @@
-import { WeatherCodes } from './codes';
+import { WeatherCodes } from './globals';
 
 export default [
   {

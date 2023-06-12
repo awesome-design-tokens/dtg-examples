@@ -1,14 +1,15 @@
+import { IMAGES, WEATHER, WeatherCodes } from "../../data/globals";
+
 export interface PictureProps {
-  src: string;
-  alt?: string;
+  code: WeatherCodes
 }
 
 const Picture = (props: PictureProps) => {
-  const { src, alt = 'Weather widget illustration' } = props;
+  const { code } = props;
 
   return (
     <figure>
-      <img src={src} alt={alt} width="100%" />
+      <img src={IMAGES[code]} alt={`Weather illustration: ${WEATHER[code]}`} width="100%" />
     </figure>
   );
 };

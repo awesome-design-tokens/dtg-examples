@@ -28,11 +28,7 @@ const App = () => {
           />
         </div>
         <aside className={styles.data}>
-          <Picture
-            src={
-              'https://res.cloudinary.com/wdybih/image/upload/v1686476354/weather/demo-rain_sfsdd0.png'
-            }
-          />
+          <Picture code={current.code} />
           <Report
             status="No issues detected. Caution advised."
             onReport={(data) => {

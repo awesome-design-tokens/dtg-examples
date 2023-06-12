@@ -1,4 +1,4 @@
-import WEATHER, { WeatherCodes } from '../../data/codes';
+import { WEATHER, WeatherCodes } from '../../data/globals';
 
 export interface InfoProps {
   city: string;
