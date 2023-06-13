@@ -1,19 +1,13 @@
 import { RadioGroup } from '@headlessui/react';
 
-import { WEATHER, WeatherCodes } from '../../data/globals';
+import { WEATHER } from '../../data/globals';
+import { Weather } from '../../types';
 
 export interface SelectorProps {
   name: string;
   value: string;
-  items: SelectorItemProps[];
+  items: Weather[];
   onSelect: (e:any) => void;
-}
-
-export interface SelectorItemProps {
-  uid: string;
-  city: string;
-  code: WeatherCodes;
-  temp: number;
 }
 
 const Selector = (props: SelectorProps) => {
