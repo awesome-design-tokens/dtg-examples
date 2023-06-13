@@ -1,0 +1,189 @@
+/*! ============================================== */
+/*! Design Tokens generated with design-tokens.dev */
+/*! ============================================== */
+
+/* C⚙️re */
+
+:root {
+  /* root */
+  --awsm-root-size: 16px;
+}
+
+/* Pal🎨tte */
+
+:root {
+  /* primary */
+  --awsm-color-primary: #c836e8;
+  --awsm-color-primary-rgb: 200, 54, 232;
+  --awsm-color-primary-contrast: var(--awsm-color-contrast-dark);
+  --awsm-color-primary-contrast-rgb: 240, 240, 240;
+  --awsm-color-primary-tint: #da79f0;
+  --awsm-color-primary-shade: #85249b;
+  --awsm-color-primary-tone: #b04fc5;
+
+  /* secondary */
+  --awsm-color-secondary: #efc710;
+  --awsm-color-secondary-rgb: 239, 199, 16;
+  --awsm-color-secondary-contrast: var(--awsm-color-contrast-light);
+  --awsm-color-secondary-contrast-rgb: 18, 18, 18;
+  --awsm-color-secondary-tint: #f4da60;
+  --awsm-color-secondary-shade: #9f850b;
+  --awsm-color-secondary-tone: #caaf35;
+
+  /* accent */
+  --awsm-color-accent: #15cade;
+  --awsm-color-accent-rgb: 21, 202, 222;
+  --awsm-color-accent-contrast: var(--awsm-color-contrast-light);
+  --awsm-color-accent-contrast-rgb: 18, 18, 18;
+  --awsm-color-accent-tint: #86dce9;
+  --awsm-color-accent-shade: #23828e;
+  --awsm-color-accent-tone: #5bb1be;
+
+  /* util-info */
+  --awsm-color-util-info: #4e87e9;
+  --awsm-color-util-info-rgb: 78, 135, 233;
+  --awsm-color-util-info-contrast: var(--awsm-color-contrast-light);
+  --awsm-color-util-info-contrast-rgb: 18, 18, 18;
+  --awsm-color-util-info-tint: #93adf1;
+  --awsm-color-util-info-shade: #395895;
+  --awsm-color-util-info-tone: #6984c5;
+
+  /* util-safe */
+  --awsm-color-util-safe: hsl(107, 73%, 53%);
+  --awsm-color-util-safe-rgb: 86, 223, 48;
+  --awsm-color-util-safe-contrast: var(--awsm-color-contrast-light);
+  --awsm-color-util-safe-contrast-rgb: 18, 18, 18;
+  --awsm-color-util-safe-tint: hsl(104, 73%, 71%);
+  --awsm-color-util-safe-shade: hsl(106, 57%, 36%);
+  --awsm-color-util-safe-tone: hsl(105, 45%, 54%);
+
+  /* util-warning */
+  --awsm-color-util-warning: #e6af5c;
+  --awsm-color-util-warning-rgb: 230, 175, 92;
+  --awsm-color-util-warning-contrast: var(--awsm-color-contrast-light);
+  --awsm-color-util-warning-contrast-rgb: 18, 18, 18;
+  --awsm-color-util-warning-tint: #f2c992;
+  --awsm-color-util-warning-shade: #93713e;
+  --awsm-color-util-warning-tone: #c59f6a;
+
+  /* util-alert */
+  --awsm-color-util-alert: #e7385e;
+  --awsm-color-util-alert-rgb: 231, 56, 94;
+  --awsm-color-util-alert-contrast: var(--awsm-color-contrast-light);
+  --awsm-color-util-alert-contrast-rgb: 18, 18, 18;
+  --awsm-color-util-alert-tint: #f78590;
+  --awsm-color-util-alert-shade: #952c3f;
+  --awsm-color-util-alert-tone: #c95b69;
+
+  /* gamma */
+  --awsm-color-gamma-950: rgb(255, 255, 255);
+  --awsm-color-gamma-900: rgb(240, 240, 240);
+  --awsm-color-gamma-850: rgb(225, 225, 225);
+  --awsm-color-gamma-800: rgb(210, 210, 210);
+  --awsm-color-gamma-750: rgb(195, 195, 195);
+  --awsm-color-gamma-700: rgb(181, 181, 181);
+  --awsm-color-gamma-650: rgb(167, 167, 167);
+  --awsm-color-gamma-600: rgb(153, 153, 153);
+  --awsm-color-gamma-550: rgb(139, 139, 139);
+  --awsm-color-gamma-500: rgb(126, 126, 126);
+  --awsm-color-gamma-450: rgb(112, 112, 112);
+  --awsm-color-gamma-400: rgb(99, 99, 99);
+  --awsm-color-gamma-350: rgb(87, 87, 87);
+  --awsm-color-gamma-300: rgb(74, 74, 74);
+  --awsm-color-gamma-250: rgb(62, 62, 62);
+  --awsm-color-gamma-200: rgb(51, 51, 51);
+  --awsm-color-gamma-150: rgb(39, 39, 39);
+  --awsm-color-gamma-100: rgb(29, 29, 29);
+  --awsm-color-gamma-050: rgb(18, 18, 18);
+  --awsm-color-gamma-000: rgb(0, 0, 0);
+
+  /* base */
+  --awsm-color-base-light: var(--awsm-color-gamma-800);
+  --awsm-color-base-light-rgb: 210, 210, 210;
+  --awsm-color-base-dark: var(--awsm-color-gamma-150);
+  --awsm-color-base-dark-rgb: 39, 39, 39;
+
+  /* contrast */
+  --awsm-color-contrast-light: var(--awsm-color-gamma-050);
+  --awsm-color-contrast-light-rgb: 18, 18, 18;
+  --awsm-color-contrast-dark: var(--awsm-color-gamma-900);
+  --awsm-color-contrast-dark-rgb: 240, 240, 240;
+
+  /* text */
+  --awsm-color-text-strong: var(--awsm-color-gamma-050);
+  --awsm-color-text-regular: var(--awsm-color-gamma-150);
+  --awsm-color-text-subtle: var(--awsm-color-gamma-250);
+  --awsm-color-text-accent: var(--awsm-color-primary-tone);
+}
+
+/* C👑ntent */
+
+:root {
+  /* font-size */
+  --awsm-font-size-xs: 0.694rem;
+  --awsm-font-size-s: 0.833rem;
+  --awsm-font-size-n: 1rem;
+  --awsm-font-size-l: 1.2rem;
+  --awsm-font-size-xl: 1.44rem;
+  --awsm-font-size-xxl: 1.728rem;
+
+  /* icon-size */
+  --awsm-icon-size-xs: 0.867rem;
+  --awsm-icon-size-s: 1.041rem;
+  --awsm-icon-size-n: 1.25rem;
+  --awsm-icon-size-l: 1.5rem;
+  --awsm-icon-size-xl: 1.8rem;
+  --awsm-icon-size-xxl: 2.16rem;
+
+  /* line-height */
+  --awsm-line-height-tight: 1.2;
+  --awsm-line-height-regular: 1.6;
+  --awsm-line-height-loose: 2.133;
+}
+
+/* Sp👽ce */
+
+:root {
+  /* spacing */
+  --awsm-space-012: 0.125rem;
+  --awsm-space-025: 0.25rem;
+  --awsm-space-050: 0.5rem;
+  --awsm-space-075: 0.75rem;
+  --awsm-space-100: 1rem;
+  --awsm-space-125: 1.25rem;
+  --awsm-space-150: 1.5rem;
+  --awsm-space-175: 1.75rem;
+  --awsm-space-200: 2rem;
+
+  /* local */
+  --awsm-side-gap: var(--awsm-space-100);
+  --awsm-col-gap: var(--awsm-space-100);
+  --awsm-width-min: 360px;
+  --awsm-width-max: 1200px;
+}
+
+/* Det😈ils */
+
+:root {
+  /* radius */
+  --awsm-radius-small: 0.25rem;
+  --awsm-radius-medium: 0.5rem;
+  --awsm-radius-large: 1rem;
+  --awsm-radius-round: 50%;
+  --awsm-radius-pill: 9999px;
+
+  /* shadow */
+  --awsm-shadow-color: #e8c136;
+  --awsm-shadow-color-rgb: 232, 193, 54;
+  --awsm-shadow-small: 0px 1px 1px rgba(var(--awsm-shadow-color-rgb), 0.2), 0px 1px 2px -0.5px rgba(var(--awsm-shadow-color-rgb), 0.45), 0px 1px 4px -3px rgba(var(--awsm-shadow-color-rgb), 0.35);
+  --awsm-shadow-medium: 0px 1px 1px -0.5px rgba(var(--awsm-shadow-color-rgb), 0.1), 0px 1px 2px -1px rgba(var(--awsm-shadow-color-rgb), 0.25), 0px 2px 3px -1.5px rgba(var(--awsm-shadow-color-rgb), 0.3), 0px 5px 6px -2px rgba(var(--awsm-shadow-color-rgb), 0.4);
+  --awsm-shadow-large: 0px 0.5px 0.5px rgba(var(--awsm-shadow-color-rgb), 0.2), 0px 2px 2px -0.5px rgba(var(--awsm-shadow-color-rgb), 0.25), 0px 5px 6px -1px rgba(var(--awsm-shadow-color-rgb), 0.25), 0px 8px 9px -1px rgba(var(--awsm-shadow-color-rgb), 0.3), 0px 12px 14px -2px rgba(var(--awsm-shadow-color-rgb), 0.3), 0px 16px 20px -3px rgba(var(--awsm-shadow-color-rgb), 0.25);
+
+  /* duration */
+  --awsm-duration-instant: 0.118s;
+  --awsm-duration-short: 0.158s;
+  --awsm-duration-regular: 0.210s;
+  --awsm-duration-long: 0.280s;
+  --awsm-duration-extra: 0.373s;
+}
+

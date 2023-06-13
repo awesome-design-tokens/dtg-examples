@@ -1,0 +1,17 @@
+.root {
+  padding: var(--awsm-space-100);
+
+  background: var(--awsm-color-secondary-tint);
+  color: var(--awsm-color-secondary-contrast);
+}
+
+.root h2,
+.root h3 {
+  margin: 0;
+
+  line-height: var(--awsm-line-height-tight);
+}
+
+.root h2 {
+  margin-bottom: var(--awsm-space-050);
+}

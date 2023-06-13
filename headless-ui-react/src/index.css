@@ -1,3 +1,5 @@
+@import '@dtg-examples/tokens/assets/index.css';
+
 @font-face {
   font-family: 'Play';
   font-style: normal;
@@ -12,8 +14,8 @@ html {
   min-height: 100%;
 
   color-scheme: light dark;
-  color: #eee;
-  background-color: #111;
+  color: var(--awsm-color-text-regular);
+  background-color: var(--awsm-color-base-light);
 
   font-family: 'Play', 'Jura', 'Helvetica Neue', sans-serif;
   font-synthesis: none;
@@ -33,7 +35,7 @@ body {
   margin: 0;
 }
 
-#root  {
+#root {
   flex: 1 1 auto;
 
   display: flex;
