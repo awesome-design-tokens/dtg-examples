@@ -1,10 +1,10 @@
+import { Fragment } from 'react';
 import { RadioGroup } from '@headlessui/react';
 
 import { WEATHER } from '../../data/globals';
 import { Weather } from '../../types';
 
 import styles from './selector.module.css';
-import { Fragment } from 'react';
 
 export interface SelectorProps {
   clsx: string;

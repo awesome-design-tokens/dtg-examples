@@ -6,16 +6,15 @@
 
   padding: var(--awsm-space-100);
 
-  background: var(--awsm-color-secondary);
+  background: var(--awsm-color-gamma-700);
   color: var(--awsm-color-contrast-light);
-  box-shadow: var(--awsm-shadow-medium);
 }
 
 .item {
   flex: 1 1 auto;
 
   padding: var(--awsm-space-100);
-  background: var(--awsm-color-secondary-tint);
+  background: var(--awsm-color-secondary);
 
   cursor: pointer;
 }
@@ -29,6 +28,6 @@
 
 @media (hover: hover) {
   .item:not(.__checked):hover {
-    background: var(--awsm-color-secondary-shade);
+    background: var(--awsm-color-secondary-tint);
   }
 }

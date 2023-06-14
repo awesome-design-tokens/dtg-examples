@@ -17,12 +17,20 @@ html {
   color: var(--awsm-color-text-regular);
   background-color: var(--awsm-color-base-light);
 
-  font-family: 'Play', 'Jura', 'Helvetica Neue', sans-serif;
+  font-size: var(--awsm-root-size);
   font-synthesis: none;
+
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+}
+
+html,
+input,
+select,
+button {
+  font-family: 'Play', 'Jura', 'Helvetica Neue', sans-serif;
 }
 
 body {
@@ -33,6 +41,9 @@ body {
   min-height: 100%;
   min-width: 360px;
   margin: 0;
+
+  font-size: var(--awsm-font-size-n);
+  line-height: var(--awsm-line-height-regular);
 }
 
 #root {
@@ -42,4 +53,22 @@ body {
   flex-flow: row nowrap;
   align-items: center;
   justify-content: center;
+}
+
+h1,
+h2,
+h3 {
+  line-height: var(--awsm-line-height-tight);
+}
+
+h1 {
+  font-size: var(--awsm-font-size-xxl);
+}
+
+h2 {
+  font-size: var(--awsm-font-size-xl);
+}
+
+h3 {
+  font-size: var(--awsm-font-size-l);
 }

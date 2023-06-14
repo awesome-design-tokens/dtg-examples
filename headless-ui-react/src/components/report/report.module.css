@@ -1,18 +1,19 @@
 .root {
   padding: var(--awsm-space-100);
 
-  background: var(--awsm-color-gamma-700);
-  color: var(--awsm-color-contrast-light);
+  background: var(--awsm-color-gamma-900);
+  color: var(--awsm-color-text-regular);
 }
 
 .root h2,
 .root h3 {
   margin: 0;
-  line-height: var(--awsm-line-height-tight);
 }
 
 .root h2 {
   margin-bottom: var(--awsm-space-050);
+
+  color: var(--awsm-color-text-strong);
 }
 
 .status {
@@ -20,6 +21,8 @@
   padding: var(--awsm-space-100);
 
   border: var(--awsm-space-012) solid var(--awsm-color-primary);
+
+  background: var(--awsm-color-gamma-800);
 }
 
 .status input {
@@ -31,10 +34,15 @@
   height: calc(var(--awsm-font-size-n) + 2 * var(--awsm-space-075));
 
   border: var(--awsm-space-012) solid var(--awsm-color-gamma-400);
-  background: var(--awsm-color-gamma-800);
+  background: var(--awsm-color-gamma-850);
+  color: var(--awsm-color-text-strong);
 
   font-size: var(--awsm-font-size-n);
   line-height: 0;
+}
+
+.status input:focus {
+  background: var(--awsm-color-gamma-900);
 }
 
 .status button {
@@ -53,4 +61,15 @@
   line-height: 0;
   text-transform: uppercase;
   white-space: nowrap;
+  cursor: pointer;
+}
+
+@media (hover: hover) {
+  .status button:hover {
+    background: var(--awsm-color-primary-tint);
+  }
+}
+
+.status button:active {
+  background: var(--awsm-color-primary-tone);
 }

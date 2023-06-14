@@ -1,9 +1,9 @@
-import { IMAGES, WEATHER, WeatherCodes } from "../../data/globals";
+import { IMAGES, WEATHER, WeatherCodes } from '../../data/globals';
 
 import styles from './picture.module.css';
 
 export interface PictureProps {
-  code: WeatherCodes
+  code: WeatherCodes;
 }
 
 const Picture = (props: PictureProps) => {
