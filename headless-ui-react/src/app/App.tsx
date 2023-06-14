@@ -33,6 +33,7 @@ const App = () => {
         <div className={styles.controls}>
           <Info city={current.city} code={current.code} temp={current.temp} />
           <Selector
+            clsx={styles.selector}
             value={current.uid}
             name="cities"
             items={data}

@@ -20,14 +20,14 @@ export default [
     city: 'Vortex Hollows',
     code: WeatherCodes.Fog,
     temp: 9999,
-    status: 'NO DATA [connection error]',
+    status: 'NO DATA [connection error x7279499]',
   },
   {
     uid: '6485aad49fff38c45dde5c9b',
     city: 'Mechropolis 2',
     code: WeatherCodes.Snow,
     temp: -12,
-    status: 'No anomalies detected.',
+    status: 'No anomalies detected. Caution advised.',
   },
   {
     uid: '6485d45838c57d864f528573',

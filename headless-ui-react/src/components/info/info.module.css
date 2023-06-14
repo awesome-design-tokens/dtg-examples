@@ -1,7 +1,7 @@
 .root {
   padding: var(--awsm-space-100);
 
-  background: var(--awsm-color-secondary-tint);
+  background: var(--awsm-color-secondary);
   color: var(--awsm-color-secondary-contrast);
 }
 

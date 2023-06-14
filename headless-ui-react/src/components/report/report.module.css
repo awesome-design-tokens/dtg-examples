@@ -1,0 +1,56 @@
+.root {
+  padding: var(--awsm-space-100);
+
+  background: var(--awsm-color-gamma-700);
+  color: var(--awsm-color-contrast-light);
+}
+
+.root h2,
+.root h3 {
+  margin: 0;
+  line-height: var(--awsm-line-height-tight);
+}
+
+.root h2 {
+  margin-bottom: var(--awsm-space-050);
+}
+
+.status {
+  margin-top: var(--awsm-space-100);
+  padding: var(--awsm-space-100);
+
+  border: var(--awsm-space-012) solid var(--awsm-color-primary);
+}
+
+.status input {
+  display: block;
+  width: 100%;
+
+  box-sizing: border-box;
+  padding: var(--awsm-space-075);
+  height: calc(var(--awsm-font-size-n) + 2 * var(--awsm-space-075));
+
+  border: var(--awsm-space-012) solid var(--awsm-color-gamma-400);
+  background: var(--awsm-color-gamma-800);
+
+  font-size: var(--awsm-font-size-n);
+  line-height: 0;
+}
+
+.status button {
+  display: block;
+  width: 100%;
+  margin-top: var(--awsm-space-100);
+
+  box-sizing: border-box;
+  padding: var(--awsm-space-075);
+  height: calc(var(--awsm-font-size-n) + 2 * var(--awsm-space-075));
+
+  border: var(--awsm-space-012) solid var(--awsm-color-primary);
+  background: var(--awsm-color-primary);
+
+  font-size: var(--awsm-font-size-n);
+  line-height: 0;
+  text-transform: uppercase;
+  white-space: nowrap;
+}

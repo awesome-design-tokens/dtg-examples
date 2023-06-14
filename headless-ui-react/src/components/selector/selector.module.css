@@ -1,0 +1,34 @@
+.root {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-items: stretch;
+  justify-content: stretch;
+
+  padding: var(--awsm-space-100);
+
+  background: var(--awsm-color-secondary);
+  color: var(--awsm-color-contrast-light);
+  box-shadow: var(--awsm-shadow-medium);
+}
+
+.item {
+  flex: 1 1 auto;
+
+  padding: var(--awsm-space-100);
+  background: var(--awsm-color-secondary-tint);
+
+  cursor: pointer;
+}
+
+.__checked {
+  color: var(--awsm-color-secondary-tint);
+  background: var(--awsm-color-secondary-contrast);
+  cursor: default;
+}
+
+
+@media (hover: hover) {
+  .item:not(.__checked):hover {
+    background: var(--awsm-color-secondary-shade);
+  }
+}

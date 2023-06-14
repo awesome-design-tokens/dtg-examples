@@ -1,5 +1,7 @@
 import { KeyboardEvent, useState } from 'react';
 
+import styles from './report.module.css';
+
 export interface ReportProps {
   status: string;
   onReport: (data: string) => void;
@@ -25,11 +27,11 @@ const Report = (props: ReportProps) => {
   };
 
   return (
-    <section>
+    <section className={styles.root}>
       <h2>Anomaly Status</h2>
       <h3>{status}</h3>
 
-      <fieldset>
+      <fieldset className={styles.status}>
         <div>
           <input
             type="text"
