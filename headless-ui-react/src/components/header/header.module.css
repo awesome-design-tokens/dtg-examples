@@ -1,5 +1,6 @@
 .root {
   padding: var(--awsm-space-200) var(--awsm-space-100);
+  border-bottom: var(--awsm-space-025) solid rgba(var(--awsm-color-primary-rgb), .5);
 
   background: var(--awsm-color-gamma-900);
   color: var(--awsm-color-contrast-light);

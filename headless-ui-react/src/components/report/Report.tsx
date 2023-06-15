@@ -1,14 +1,16 @@
 import { KeyboardEvent, useState } from 'react';
 
+import { ComponentProps } from '../../types';
+
 import styles from './report.module.css';
 
-export interface ReportProps {
+export interface ReportProps extends ComponentProps {
   status: string;
   onReport: (data: string) => void;
 }
 
 const Report = (props: ReportProps) => {
-  const { status, onReport } = props;
+  const { clsx, status, onReport } = props;
 
   const [value, setValue] = useState<string>('');
 
@@ -27,7 +29,7 @@ const Report = (props: ReportProps) => {
   };
 
   return (
-    <section className={styles.root}>
+    <section className={`${styles.root}${clsx ? ' ' + clsx : ''}`}>
       <h2>Anomaly Status</h2>
       <h3>{status}</h3>
 

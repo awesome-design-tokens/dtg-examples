@@ -7,3 +7,8 @@ export interface Weather {
   temp: number;
   status: string;
 }
+
+export interface ComponentProps {
+  clsx?: string;
+  tabIndex?: number;
+}

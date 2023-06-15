@@ -30,6 +30,16 @@ const App = () => {
       <Header />
 
       <main className={styles.main}>
+        <aside className={styles.data}>
+          <Picture code={current.code} />
+          <Report
+            clsx={styles.report}
+            status={current.status}
+            onReport={(data) => {
+              console.log('Report', data);
+            }}
+          />
+        </aside>
         <div className={styles.controls}>
           <Info city={current.city} code={current.code} temp={current.temp} />
           <Selector
@@ -43,15 +53,6 @@ const App = () => {
             }}
           />
         </div>
-        <aside className={styles.data}>
-          <Picture code={current.code} />
-          <Report
-            status={current.status}
-            onReport={(data) => {
-              console.log('Report', data);
-            }}
-          />
-        </aside>
       </main>
     </div>
   );

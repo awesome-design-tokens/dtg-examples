@@ -2,12 +2,11 @@ import { Fragment } from 'react';
 import { RadioGroup } from '@headlessui/react';
 
 import { WEATHER } from '../../data/globals';
-import { Weather } from '../../types';
+import { ComponentProps, Weather } from '../../types';
 
 import styles from './selector.module.css';
 
-export interface SelectorProps {
-  clsx: string;
+export interface SelectorProps extends ComponentProps {
   name: string;
   value: string;
   items: Weather[];
@@ -32,7 +31,12 @@ const Selector = (props: SelectorProps) => {
                 checked ? `${styles.item} ${styles.__checked}` : styles.item
               }
             >
-              {city}, {WEATHER[code]}: {temp}°C
+              <RadioGroup.Label className={styles.label}>
+                {city}
+              </RadioGroup.Label>
+              <RadioGroup.Description className={styles.description}>
+                {WEATHER[code]}: {temp}°C
+              </RadioGroup.Description>
             </div>
           )}
         </RadioGroup.Option>

@@ -20,9 +20,9 @@
   margin-top: var(--awsm-space-100);
   padding: var(--awsm-space-100);
 
-  border: var(--awsm-space-012) solid var(--awsm-color-primary);
+  border: var(--awsm-space-012) solid rgba(var(--awsm-color-primary-rgb), .5);
 
-  background: var(--awsm-color-gamma-800);
+  background: var(--awsm-color-base-dark);
 }
 
 .status input {

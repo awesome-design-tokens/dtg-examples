@@ -13,7 +13,7 @@
 .item {
   flex: 1 1 auto;
 
-  padding: var(--awsm-space-100);
+  padding: var(--awsm-space-075) var(--awsm-space-100);
   background: var(--awsm-color-secondary);
 
   cursor: pointer;
@@ -30,4 +30,18 @@
   .item:not(.__checked):hover {
     background: var(--awsm-color-secondary-tint);
   }
+}
+
+.label {
+  display: block;
+
+  font-size: var(--awsm-font-size-l);
+  font-weight: bold;
+  cursor: inherit;
+}
+
+.description {
+  margin: 0;
+
+  font-size: var(--awsm-font-size-n);
 }
