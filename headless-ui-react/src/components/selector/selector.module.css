@@ -16,10 +16,16 @@
   padding: var(--awsm-space-075) var(--awsm-space-100);
   background: var(--awsm-color-secondary);
 
+  transition: all ease-out var(--awsm-duration-short);
   cursor: pointer;
 }
 
+.item:focus-visible {
+  --focus-color: var(--awsm-color-primary);
+}
+
 .__checked {
+  z-index: 1;
   color: var(--awsm-color-secondary-tint);
   background: var(--awsm-color-secondary-contrast);
   cursor: default;

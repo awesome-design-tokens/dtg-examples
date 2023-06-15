@@ -39,6 +39,8 @@
 
   font-size: var(--awsm-font-size-n);
   line-height: 0;
+
+  transition: all ease-out var(--awsm-duration-instant);
 }
 
 .status input:focus {
@@ -61,7 +63,9 @@
   line-height: 0;
   text-transform: uppercase;
   white-space: nowrap;
+
   cursor: pointer;
+  transition: all ease-out var(--awsm-duration-instant);
 }
 
 @media (hover: hover) {

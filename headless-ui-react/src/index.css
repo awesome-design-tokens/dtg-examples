@@ -33,6 +33,15 @@ button {
   font-family: 'Play', 'Jura', 'Helvetica Neue', sans-serif;
 }
 
+:root {
+  --focus-color: var(--awsm-color-secondary);
+}
+
+:focus-visible {
+  outline: var(--awsm-space-025) solid var(--focus-color);
+  outline-offset: 1px;
+}
+
 body {
   display: flex;
   flex: 1 0 100%;
