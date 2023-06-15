@@ -13,31 +13,31 @@
 
 :root {
   /* primary */
-  --awsm-color-primary: #c836e8;
-  --awsm-color-primary-rgb: 200, 54, 232;
+  --awsm-color-primary: #9d0fbd;
+  --awsm-color-primary-rgb: 157, 15, 189;
   --awsm-color-primary-contrast: var(--awsm-color-contrast-dark);
   --awsm-color-primary-contrast-rgb: 240, 240, 240;
-  --awsm-color-primary-tint: #da79f0;
-  --awsm-color-primary-shade: #85249b;
-  --awsm-color-primary-tone: #b04fc5;
+  --awsm-color-primary-tint: #c270d4;
+  --awsm-color-primary-shade: #67187a;
+  --awsm-color-primary-tone: #9748a9;
 
   /* secondary */
-  --awsm-color-secondary: #efc710;
-  --awsm-color-secondary-rgb: 239, 199, 16;
+  --awsm-color-secondary: #efcb26;
+  --awsm-color-secondary-rgb: 239, 203, 38;
   --awsm-color-secondary-contrast: var(--awsm-color-contrast-light);
   --awsm-color-secondary-contrast-rgb: 18, 18, 18;
-  --awsm-color-secondary-tint: #f4da60;
-  --awsm-color-secondary-shade: #9f850b;
-  --awsm-color-secondary-tone: #caaf35;
+  --awsm-color-secondary-tint: #f9dc7a;
+  --awsm-color-secondary-shade: #998222;
+  --awsm-color-secondary-tone: #ccb151;
 
   /* accent */
-  --awsm-color-accent: #15cade;
-  --awsm-color-accent-rgb: 21, 202, 222;
+  --awsm-color-accent: #bcf282;
+  --awsm-color-accent-rgb: 188, 242, 130;
   --awsm-color-accent-contrast: var(--awsm-color-contrast-light);
   --awsm-color-accent-contrast-rgb: 18, 18, 18;
-  --awsm-color-accent-tint: #86dce9;
-  --awsm-color-accent-shade: #23828e;
-  --awsm-color-accent-tone: #5bb1be;
+  --awsm-color-accent-tint: #d4f7ac;
+  --awsm-color-accent-shade: #799a56;
+  --awsm-color-accent-tone: #a9cb83;
 
   /* util-info */
   --awsm-color-util-info: #4e87e9;
@@ -49,13 +49,13 @@
   --awsm-color-util-info-tone: #6984c5;
 
   /* util-safe */
-  --awsm-color-util-safe: hsl(107, 73%, 53%);
+  --awsm-color-util-safe: #56df30;
   --awsm-color-util-safe-rgb: 86, 223, 48;
   --awsm-color-util-safe-contrast: var(--awsm-color-contrast-light);
   --awsm-color-util-safe-contrast-rgb: 18, 18, 18;
-  --awsm-color-util-safe-tint: hsl(104, 73%, 71%);
-  --awsm-color-util-safe-shade: hsl(106, 57%, 36%);
-  --awsm-color-util-safe-tone: hsl(105, 45%, 54%);
+  --awsm-color-util-safe-tint: #9ceb7f;
+  --awsm-color-util-safe-shade: #409027;
+  --awsm-color-util-safe-tone: #6fbe55;
 
   /* util-warning */
   --awsm-color-util-warning: #e6af5c;
@@ -76,26 +76,26 @@
   --awsm-color-util-alert-tone: #c95b69;
 
   /* gamma */
-  --awsm-color-gamma-950: rgb(255, 255, 255);
-  --awsm-color-gamma-900: rgb(240, 240, 240);
-  --awsm-color-gamma-850: rgb(225, 225, 225);
-  --awsm-color-gamma-800: rgb(210, 210, 210);
-  --awsm-color-gamma-750: rgb(195, 195, 195);
-  --awsm-color-gamma-700: rgb(181, 181, 181);
-  --awsm-color-gamma-650: rgb(167, 167, 167);
-  --awsm-color-gamma-600: rgb(153, 153, 153);
-  --awsm-color-gamma-550: rgb(139, 139, 139);
-  --awsm-color-gamma-500: rgb(126, 126, 126);
-  --awsm-color-gamma-450: rgb(112, 112, 112);
-  --awsm-color-gamma-400: rgb(99, 99, 99);
-  --awsm-color-gamma-350: rgb(87, 87, 87);
-  --awsm-color-gamma-300: rgb(74, 74, 74);
-  --awsm-color-gamma-250: rgb(62, 62, 62);
-  --awsm-color-gamma-200: rgb(51, 51, 51);
-  --awsm-color-gamma-150: rgb(39, 39, 39);
-  --awsm-color-gamma-100: rgb(29, 29, 29);
-  --awsm-color-gamma-050: rgb(18, 18, 18);
-  --awsm-color-gamma-000: rgb(0, 0, 0);
+  --awsm-color-gamma-950: #ffffff;
+  --awsm-color-gamma-900: #f0f0f0;
+  --awsm-color-gamma-850: #e1e1e1;
+  --awsm-color-gamma-800: #d2d2d2;
+  --awsm-color-gamma-750: #c3c3c3;
+  --awsm-color-gamma-700: #b5b5b5;
+  --awsm-color-gamma-650: #a7a7a7;
+  --awsm-color-gamma-600: #999999;
+  --awsm-color-gamma-550: #8b8b8b;
+  --awsm-color-gamma-500: #7e7e7e;
+  --awsm-color-gamma-450: #707070;
+  --awsm-color-gamma-400: #636363;
+  --awsm-color-gamma-350: #575757;
+  --awsm-color-gamma-300: #4a4a4a;
+  --awsm-color-gamma-250: #3e3e3e;
+  --awsm-color-gamma-200: #333333;
+  --awsm-color-gamma-150: #272727;
+  --awsm-color-gamma-100: #1d1d1d;
+  --awsm-color-gamma-050: #121212;
+  --awsm-color-gamma-000: #000000;
 
   /* base */
   --awsm-color-base-light: var(--awsm-color-gamma-800);
@@ -120,20 +120,20 @@
 
 :root {
   /* font-size */
-  --awsm-font-size-xs: 0.694rem;
-  --awsm-font-size-s: 0.833rem;
+  --awsm-font-size-xs: 0.64rem;
+  --awsm-font-size-s: 0.8rem;
   --awsm-font-size-n: 1rem;
-  --awsm-font-size-l: 1.2rem;
-  --awsm-font-size-xl: 1.44rem;
-  --awsm-font-size-xxl: 1.728rem;
+  --awsm-font-size-l: 1.25rem;
+  --awsm-font-size-xl: 1.563rem;
+  --awsm-font-size-xxl: 1.953rem;
 
   /* icon-size */
-  --awsm-icon-size-xs: 0.867rem;
-  --awsm-icon-size-s: 1.041rem;
+  --awsm-icon-size-xs: 0.8rem;
+  --awsm-icon-size-s: 1rem;
   --awsm-icon-size-n: 1.25rem;
-  --awsm-icon-size-l: 1.5rem;
-  --awsm-icon-size-xl: 1.8rem;
-  --awsm-icon-size-xxl: 2.16rem;
+  --awsm-icon-size-l: 1.563rem;
+  --awsm-icon-size-xl: 1.954rem;
+  --awsm-icon-size-xxl: 2.441rem;
 
   /* line-height */
   --awsm-line-height-tight: 1.2;
@@ -173,17 +173,17 @@
   --awsm-radius-pill: 9999px;
 
   /* shadow */
-  --awsm-shadow-color: #e8c136;
-  --awsm-shadow-color-rgb: 232, 193, 54;
+  --awsm-shadow-color: #32075f;
+  --awsm-shadow-color-rgb: 50, 7, 95;
   --awsm-shadow-small: 0px 1px 1px rgba(var(--awsm-shadow-color-rgb), 0.2), 0px 1px 2px -0.5px rgba(var(--awsm-shadow-color-rgb), 0.45), 0px 1px 4px -3px rgba(var(--awsm-shadow-color-rgb), 0.35);
   --awsm-shadow-medium: 0px 1px 1px -0.5px rgba(var(--awsm-shadow-color-rgb), 0.1), 0px 1px 2px -1px rgba(var(--awsm-shadow-color-rgb), 0.25), 0px 2px 3px -1.5px rgba(var(--awsm-shadow-color-rgb), 0.3), 0px 5px 6px -2px rgba(var(--awsm-shadow-color-rgb), 0.4);
   --awsm-shadow-large: 0px 0.5px 0.5px rgba(var(--awsm-shadow-color-rgb), 0.2), 0px 2px 2px -0.5px rgba(var(--awsm-shadow-color-rgb), 0.25), 0px 5px 6px -1px rgba(var(--awsm-shadow-color-rgb), 0.25), 0px 8px 9px -1px rgba(var(--awsm-shadow-color-rgb), 0.3), 0px 12px 14px -2px rgba(var(--awsm-shadow-color-rgb), 0.3), 0px 16px 20px -3px rgba(var(--awsm-shadow-color-rgb), 0.25);
 
   /* duration */
-  --awsm-duration-instant: 0.118s;
-  --awsm-duration-short: 0.158s;
-  --awsm-duration-regular: 0.210s;
-  --awsm-duration-long: 0.280s;
-  --awsm-duration-extra: 0.373s;
+  --awsm-duration-instant: 0.134s;
+  --awsm-duration-short: 0.168s;
+  --awsm-duration-regular: 0.21s;
+  --awsm-duration-long: 0.263s;
+  --awsm-duration-extra: 0.328s;
 }
 
