@@ -1,5 +1,6 @@
-import { KeyboardEvent, useState } from 'react';
+import { KeyboardEvent, useContext, useState } from 'react';
 
+import { ThemeContext } from '../../data/theme';
 import { ComponentProps } from '../../types';
 
 import styles from './report.module.css';
@@ -13,10 +14,13 @@ const Report = (props: ReportProps) => {
   const { clsx, status, onReport } = props;
 
   const [value, setValue] = useState<string>('');
+  const { nextTheme } = useContext(ThemeContext);
 
   const handleClick = () => {
     onReport(value);
     setValue('');
+
+    nextTheme();
   };
 
   const handleKey = (e: KeyboardEvent<HTMLButtonElement>) => {

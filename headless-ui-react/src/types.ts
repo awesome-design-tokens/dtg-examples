@@ -10,5 +10,4 @@ export interface Weather {
 
 export interface ComponentProps {
   clsx?: string;
-  tabIndex?: number;
 }

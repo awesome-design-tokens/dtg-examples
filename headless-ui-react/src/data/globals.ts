@@ -8,6 +8,13 @@ export enum WeatherCodes {
   Storm,
 }
 
+export enum Themes {
+  Cyber,
+  Futura,
+  Retro,
+  Mono
+}
+
 export const IMAGES = {
   [WeatherCodes.Sunny]: '/images/demo-sun.jpeg',
   [WeatherCodes.Cloudy]: '/images/demo-fog.jpeg',
@@ -26,4 +33,11 @@ export const WEATHER = {
   [WeatherCodes.Rain]: 'Heavy Rain',
   [WeatherCodes.Snow]: 'Snow',
   [WeatherCodes.Storm]: 'Stormy',
-};
+} as const;
+
+export const THEME = {
+  [Themes.Cyber]: 'cyber',
+  [Themes.Futura]: 'futura',
+  [Themes.Retro]: 'retro',
+  [Themes.Mono]: 'mono',
+} as const;
