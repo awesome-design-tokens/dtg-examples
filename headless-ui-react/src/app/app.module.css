@@ -1,8 +1,10 @@
 .root {
-  width: 60vw;
+  width: 100%;
 
   min-width: 360px;
   max-width: 800px;
+
+  box-shadow: var(--awsm-shadow-medium);
 }
 
 .main {
@@ -12,6 +14,10 @@
 }
 
 @media (min-width: 780px) {
+  .root {
+    width: 60vw;
+  }
+
   .main {
     flex-flow: row;
   }

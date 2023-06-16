@@ -15,7 +15,7 @@ html {
 
   color-scheme: light dark;
   color: var(--awsm-color-text-regular);
-  background-color: var(--awsm-color-base-light);
+  background-color: var(--awsm-color-gamma-400);
 
   font-size: var(--awsm-root-size);
   font-synthesis: none;
@@ -104,6 +104,8 @@ h3 {
   --awsm-color-accent-tint: #d4f7ac;
   --awsm-color-accent-shade: #799a56;
   --awsm-color-accent-tone: #a9cb83;
+  --awsm-shadow-color: #520553;
+  --awsm-shadow-color-rgb: 82, 5, 83;
 }
 
 :root[data-theme='futura'] {
@@ -128,6 +130,8 @@ h3 {
   --awsm-color-accent-tint: #ae68b8;
   --awsm-color-accent-shade: #561361;
   --awsm-color-accent-tone: #84418f;
+  --awsm-shadow-color: #044b97;
+  --awsm-shadow-color-rgb: 4, 75, 151;
 }
 
 :root[data-theme='retro'] {
@@ -152,6 +156,8 @@ h3 {
   --awsm-color-accent-tint: #eeab68;
   --awsm-color-accent-shade: #8d5515;
   --awsm-color-accent-tone: #c08241;
+  --awsm-shadow-color: #74052d;
+  --awsm-shadow-color-rgb: 116, 5, 45;
 }
 
 :root[data-theme='mono'] {
@@ -176,4 +182,6 @@ h3 {
   --awsm-color-accent-tint: #4e4e4e;
   --awsm-color-accent-shade: #000000;
   --awsm-color-accent-tone: #2c2c2c;
+  --awsm-shadow-color: #242424;
+  --awsm-shadow-color-rgb: 36, 36, 36;
 }

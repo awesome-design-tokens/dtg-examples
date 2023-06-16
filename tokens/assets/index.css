@@ -110,10 +110,10 @@
   --awsm-color-contrast-dark-rgb: 240, 240, 240;
 
   /* text */
-  --awsm-color-text-strong: var(--awsm-color-gamma-050);
-  --awsm-color-text-regular: var(--awsm-color-gamma-150);
-  --awsm-color-text-subtle: var(--awsm-color-gamma-250);
-  --awsm-color-text-accent: var(--awsm-color-primary-tone);
+  --awsm-color-text-strong: var(--awsm-color-gamma-850);
+  --awsm-color-text-regular: var(--awsm-color-gamma-750);
+  --awsm-color-text-subtle: var(--awsm-color-gamma-650);
+  --awsm-color-text-accent: var(--awsm-color-primary-tone);  
 }
 
 /* C👑ntent */

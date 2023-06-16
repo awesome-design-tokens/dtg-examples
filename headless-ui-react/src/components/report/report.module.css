@@ -1,7 +1,7 @@
 .root {
   padding: var(--awsm-space-100);
 
-  background: var(--awsm-color-gamma-900);
+  background-color: var(--awsm-color-base-dark);
   color: var(--awsm-color-text-regular);
 }
 
@@ -22,7 +22,7 @@
 
   border: var(--awsm-space-012) solid rgba(var(--awsm-color-primary-rgb), .5);
 
-  background: var(--awsm-color-base-dark);
+  background: var(--awsm-color-gamma-300);
 }
 
 .status input {
