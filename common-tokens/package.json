@@ -1,0 +1,8 @@
+{
+  "name": "@dtg-examples/common-tokens",
+  "version": "1.0.0",
+  "files": [
+    "styles",
+    "fonts"
+  ]
+}

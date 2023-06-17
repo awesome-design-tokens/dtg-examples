@@ -1,7 +1,7 @@
 {
-  "name": "tailwind-react",
+  "name": "@dtg-examples/tailwind-react",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -10,7 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@dtg-examples/tokens": "workspace:^",
+    "@dtg-examples/common-data": "workspace:^",
+    "@dtg-examples/common-tokens": "workspace:^",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

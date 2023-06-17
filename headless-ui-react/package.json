@@ -10,7 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@dtg-examples/tokens": "workspace:^",
+    "@dtg-examples/common-data": "workspace:^",
+    "@dtg-examples/common-tokens": "workspace:^",
     "@headlessui/react": "^1.7.15",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"

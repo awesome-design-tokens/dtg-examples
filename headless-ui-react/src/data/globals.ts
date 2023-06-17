@@ -1,12 +1,4 @@
-export enum WeatherCodes {
-  Sunny,
-  Cloudy,
-  Fog,
-  Drizzle,
-  Rain,
-  Snow,
-  Storm,
-}
+import { WeatherCodes } from "@dtg-examples/common-data";
 
 export enum Themes {
   Cyber,

@@ -6,8 +6,7 @@ import { Picture } from '../components/picture/Picture';
 import { Report } from '../components/report/Report';
 import { Selector } from '../components/selector/Selector';
 
-import data from '../data/data';
-import { Weather } from '../types';
+import { data, Weather } from '@dtg-examples/common-data';
 
 import styles from './app.module.css';
 

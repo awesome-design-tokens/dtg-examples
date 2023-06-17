@@ -1,6 +1,14 @@
-import { WeatherCodes } from './globals';
+export enum WeatherCodes {
+  Sunny,
+  Cloudy,
+  Fog,
+  Drizzle,
+  Rain,
+  Snow,
+  Storm,
+}
 
-export default [
+export const data = [
   {
     uid: '6485aad407fa6257d272c76c',
     city: 'Liberty District',

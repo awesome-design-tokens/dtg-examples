@@ -1,9 +1,0 @@
-{
-  "name": "@dtg-examples/tokens",
-  "version": "1.0.0",
-  "files": [
-    "assets"
-  ],
-  "author": "Evgeny Khoroshilov",
-  "license": "MIT"
-}

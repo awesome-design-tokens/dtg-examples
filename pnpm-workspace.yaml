@@ -1,3 +1,5 @@
 packages:
-  - "./headless-ui"
-  - "./tokens"
+  - "./headless-ui-react"
+  - "./tailwind-react"
+  - "./common-data"
+  - "./common-tokens"
