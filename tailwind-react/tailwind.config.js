@@ -108,6 +108,7 @@ export default {
 
     // preserving original naming
     lineHeight: {
+      reset: '0',
       none: '1',
       tight: 'var(--awsm-line-height-tight)',
       snug: 'var(--awsm-line-height-tight)',
@@ -165,6 +166,39 @@ export default {
       regular: 'var(--awsm-duration-regular)',
       long: 'var(--awsm-duration-long)',
       extra: 'var(--awsm-duration-extra)',
+    },
+
+    extend: {
+      borderWidth: {
+        2: 'var(--awsm-space-012)',
+        4: 'var(--awsm-space-025)',
+        8: 'var(--awsm-space-050)',
+      },
+
+      width: {
+        'screen-10': '10vw',
+        'screen-20': '20vw',
+        'screen-30': '30vw',
+        'screen-40': '40vw',
+        'screen-50': '50vw',
+        'screen-60': '60vw',
+        'screen-70': '70vw',
+        'screen-80': '80vw',
+        'screen-90': '90vw',
+      },
+
+      height: {
+        'form-base':
+          'calc(var(--awsm-font-size-n) + 2 * var(--awsm-space-075))',
+      },
+
+      minWidth: {
+        DEFAULT: 'var(--min-width)',
+      },
+
+      maxWidth: {
+        DEFAULT: 'var(--max-width)',
+      },
     },
   },
 };
