@@ -6,7 +6,7 @@ import { Header } from '../components/header/Header';
 import { Info } from '../components/info/Info';
 import { Picture } from '../components/picture/Picture';
 import { Report } from '../components/report/Report';
-// import { Selector } from '../components/selector/Selector';
+import { Selector } from '../components/selector/Selector';
 
 const App = () => {
   const [items, setItems] = useState<Weather[]>([]);
@@ -30,6 +30,7 @@ const App = () => {
         <aside className="grow shrink basis-2/5 flex flex-col justify-stretch">
           <Picture code={current.code} />
           <Report
+            clsx="flex-grow flex-shrink-0 flex flex-col justify-center"
             status={current.status}
             onReport={(data) => {
               console.log('Report', data);
@@ -38,8 +39,8 @@ const App = () => {
         </aside>
         <div className="grow shrink basis-3/5 flex flex-col justify-stretch">
           <Info city={current.city} code={current.code} temp={current.temp} />
-          {/* <Selector
-            clsx={styles.selector}
+          <Selector
+            clsx="flex-grow flex-shrink-0 flex flex-col justify-center"
             value={current.uid}
             name="cities"
             items={data}
@@ -47,7 +48,7 @@ const App = () => {
               setUid(value);
               console.log('Selection', value);
             }}
-          /> */}
+          />
         </div>
       </main>
     </div>
