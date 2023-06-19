@@ -11,7 +11,7 @@ export interface SelectorProps extends ComponentProps {
   name: string;
   value: string;
   items: Weather[];
-  onSelect: (e: any) => void;
+  onSelect: (v: string) => void;
 }
 
 const Selector = (props: SelectorProps) => {

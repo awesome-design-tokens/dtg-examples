@@ -1,8 +1,9 @@
 import { WeatherCodes } from "@dtg-examples/common-data";
 
 export enum Themes {
-  Cyber,
+  Awsm,
   Futura,
+  Cyber,
   Retro,
   Mono
 }
@@ -28,8 +29,9 @@ export const WEATHER = {
 } as const;
 
 export const THEME = {
-  [Themes.Cyber]: 'cyber',
+  [Themes.Awsm]: 'awsm',
   [Themes.Futura]: 'futura',
+  [Themes.Cyber]: 'cyber',
   [Themes.Retro]: 'retro',
   [Themes.Mono]: 'mono',
 } as const;

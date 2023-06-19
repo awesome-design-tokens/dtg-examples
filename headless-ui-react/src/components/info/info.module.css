@@ -1,8 +1,11 @@
 .root {
+  z-index: 10;
   padding: var(--awsm-space-100);
 
   background: var(--awsm-color-secondary);
   color: var(--awsm-color-secondary-contrast);
+
+  box-shadow: var(--awsm-shadow-small);
 }
 
 .root h2,

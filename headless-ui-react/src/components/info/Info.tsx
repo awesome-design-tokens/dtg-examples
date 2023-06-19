@@ -3,6 +3,7 @@ import { WeatherCodes } from '@dtg-examples/common-data';
 import { WEATHER } from '../../data/globals';
 
 import styles from './info.module.css';
+
 export interface InfoProps {
   city: string;
   code: WeatherCodes;

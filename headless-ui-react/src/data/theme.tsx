@@ -1,36 +1,31 @@
-import { createContext, useState, ReactElement, useEffect } from 'react';
+import { createContext, useState, ReactElement } from 'react';
+
 import { THEME, Themes } from './globals';
 
 type ThemeNames = (typeof THEME)[Themes];
 
 interface ThemeContextProps {
   theme: ThemeNames;
-  nextTheme: () => void;
+  changeTheme: (theme: ThemeNames) => void;
 }
 
 const ThemeContext = createContext<ThemeContextProps>({
-  theme: THEME[Themes.Cyber],
-  nextTheme: () => null,
+  theme: THEME[Themes.Awsm],
+  changeTheme: () => null,
 });
 
-const themes = Object.values(THEME);
-
 const ThemeProvider = ({ children }: { children: ReactElement }) => {
-  const [theme, setTheme] = useState<ThemeNames>(THEME[Themes.Cyber]);
-  const [index, setIndex] = useState(0);
+  const [theme, setTheme] = useState<ThemeNames>(THEME[Themes.Awsm]);
 
-  const nextTheme = () => {
-    setIndex(index >= themes.length - 1 ? 0 : index + 1);
+  const changeTheme = (t: ThemeNames) => {
+    setTheme(t);
+    document.documentElement.dataset.theme = t;
   };
-
-  useEffect(() => {
-    setTheme(themes[index]);
-  }, [index]);
 
   document.documentElement.dataset.theme = theme;
 
   return (
-    <ThemeContext.Provider value={{ theme, nextTheme }}>
+    <ThemeContext.Provider value={{ theme, changeTheme }}>
       {children}
     </ThemeContext.Provider>
   );

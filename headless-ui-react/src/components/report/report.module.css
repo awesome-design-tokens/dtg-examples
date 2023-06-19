@@ -59,6 +59,7 @@
   border: var(--awsm-space-012) solid var(--awsm-color-primary);
   background: var(--awsm-color-primary);
 
+  color: var(--awsm-color-primary-contrast);
   font-size: var(--awsm-font-size-n);
   line-height: 0;
   text-transform: uppercase;
