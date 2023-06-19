@@ -68,7 +68,7 @@ importers:
         specifier: ^4.3.9
         version: 4.3.9
 
-  tailwind-react:
+  headless-ui-tw-react:
     dependencies:
       '@dtg-examples/common-data':
         specifier: workspace:^
