@@ -1,8 +1,7 @@
 import { Fragment } from 'react';
 import { RadioGroup } from '@headlessui/react';
-import { Weather } from '@dtg-examples/common-data';
+import { Weather, weather } from '@dtg-examples/common-data';
 
-import { WEATHER } from '../../data/globals';
 import { ComponentProps } from '../../types';
 
 import styles from './list.module.css';
@@ -36,7 +35,7 @@ const List = (props: ListProps) => {
                 {city}
               </RadioGroup.Label>
               <RadioGroup.Description className={styles.description}>
-                {WEATHER[code]}: {temp}°C
+                {weather[code]}: {temp}°C
               </RadioGroup.Description>
             </div>
           )}

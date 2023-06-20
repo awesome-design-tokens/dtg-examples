@@ -1,6 +1,6 @@
 import { createContext, useState, ReactElement } from 'react';
 
-import { THEME, ThemeNames, Themes } from './globals';
+import { ThemeNames, Themes, themes } from '@dtg-examples/common-data';
 
 interface ThemeContextProps {
   theme: ThemeNames;
@@ -8,12 +8,12 @@ interface ThemeContextProps {
 }
 
 const ThemeContext = createContext<ThemeContextProps>({
-  theme: THEME[Themes.Awsm],
+  theme: themes[Themes.Awsm],
   changeTheme: () => null,
 });
 
 const ThemeProvider = ({ children }: { children: ReactElement }) => {
-  const [theme, setTheme] = useState<ThemeNames>(THEME[Themes.Awsm]);
+  const [theme, setTheme] = useState<ThemeNames>(themes[Themes.Awsm]);
 
   const changeTheme = (t: ThemeNames) => {
     setTheme(t);

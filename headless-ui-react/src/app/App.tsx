@@ -1,5 +1,12 @@
 import { useContext, useEffect, useState } from 'react';
-import { data, Weather } from '@dtg-examples/common-data';
+
+import {
+  ThemeNames,
+  Themes,
+  Weather,
+  data,
+  themes,
+} from '@dtg-examples/common-data';
 
 import { Header } from '../components/header/Header';
 import { Info } from '../components/info/Info';
@@ -8,12 +15,11 @@ import { Report } from '../components/report/Report';
 import { List } from '../components/list/List';
 import { Select } from '../components/select/Select';
 
-import { ThemeContext } from '../data/theme';
-import { THEME, ThemeNames, Themes } from '../data/globals';
+import { ThemeContext } from '../context/theme';
 
 import styles from './app.module.css';
 
-const themes = Object.values(THEME);
+const themesList = Object.values(themes);
 
 const App = () => {
   const [items, setItems] = useState<Weather[]>([]);
@@ -36,10 +42,12 @@ const App = () => {
       <Header>
         <Select
           name="themes"
-          items={themes}
+          items={themesList}
           value={theme}
           onSelect={(value) => {
-            changeTheme(THEME[themes.indexOf(value as ThemeNames) as Themes]);
+            changeTheme(
+              themes[themesList.indexOf(value as ThemeNames) as Themes]
+            );
             console.log('Theme: ', value);
           }}
         />

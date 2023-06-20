@@ -1,12 +1,4 @@
-export enum WeatherCodes {
-  Sunny,
-  Cloudy,
-  Fog,
-  Drizzle,
-  Rain,
-  Snow,
-  Storm,
-}
+import { WeatherCodes } from "./types";
 
 export const data = [
   {

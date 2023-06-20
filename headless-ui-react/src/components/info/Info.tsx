@@ -1,6 +1,4 @@
-import { WeatherCodes } from '@dtg-examples/common-data';
-
-import { WEATHER } from '../../data/globals';
+import { WeatherCodes, weather } from '@dtg-examples/common-data';
 
 import styles from './info.module.css';
 
@@ -17,7 +15,7 @@ const Info = (props: InfoProps) => {
     <section className={styles.root}>
       <h2>{city}</h2>
       <h3>
-        {WEATHER[code]}: {temp}°C
+        {weather[code]}: {temp}°C
       </h3>
     </section>
   );

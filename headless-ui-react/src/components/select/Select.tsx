@@ -25,7 +25,6 @@ const Select = (props: SelectProps) => {
           {items.map((value) => (
             <Listbox.Option key={value} value={value} as={Fragment}>
               {({
-                active,
                 selected,
               }: {
                 active: boolean;

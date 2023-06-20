@@ -23,10 +23,3 @@ export enum Themes {
   Retro,
   Mono
 }
-
-export const data: Weather[];
-export const themes: Record<Themes, string>;
-export const weather: Record<WeatherCodes, string>;
-export const images: Record<WeatherCodes, string>;
-
-export type ThemeNames = (typeof themes)[Themes];

@@ -1,6 +1,4 @@
-import { WeatherCodes } from '@dtg-examples/common-data';
-
-import { IMAGES, WEATHER } from '../../data/globals';
+import { WeatherCodes, images, weather } from '@dtg-examples/common-data';
 
 import styles from './picture.module.css';
 
@@ -13,7 +11,7 @@ const Picture = (props: PictureProps) => {
 
   return (
     <figure className={styles.root}>
-      <img src={IMAGES[code]} alt={`Weather illustration: ${WEATHER[code]}`} />
+      <img src={images[code]} alt={`Weather illustration: ${weather[code]}`} />
     </figure>
   );
 };
