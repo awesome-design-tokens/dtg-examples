@@ -5,19 +5,22 @@ import { Header } from '../components/header/Header';
 import { Info } from '../components/info/Info';
 import { Picture } from '../components/picture/Picture';
 import { Report } from '../components/report/Report';
-import { Selector } from '../components/selector/Selector';
+import { List } from '../components/list/List';
+import { Select } from '../components/select/Select';
 
 import { ThemeContext } from '../data/theme';
-import { THEME, Themes } from '../data/globals';
+import { THEME, ThemeNames, Themes } from '../data/globals';
 
 import styles from './app.module.css';
+
+const themes = Object.values(THEME);
 
 const App = () => {
   const [items, setItems] = useState<Weather[]>([]);
   const [uid, setUid] = useState(data[0].uid);
   const [loading, setLoading] = useState(true);
 
-  const { changeTheme } = useContext(ThemeContext);
+  const { theme, changeTheme } = useContext(ThemeContext);
 
   useEffect(() => {
     setItems(data);
@@ -30,7 +33,17 @@ const App = () => {
 
   return (
     <div className={styles.root}>
-      <Header />
+      <Header>
+        <Select
+          name="themes"
+          items={themes}
+          value={theme}
+          onSelect={(value) => {
+            changeTheme(THEME[themes.indexOf(value as ThemeNames) as Themes]);
+            console.log('Theme: ', value);
+          }}
+        />
+      </Header>
 
       <main className={styles.main}>
         <aside className={styles.data}>
@@ -45,14 +58,13 @@ const App = () => {
         </aside>
         <div className={styles.controls}>
           <Info city={current.city} code={current.code} temp={current.temp} />
-          <Selector
+          <List
             clsx={styles.selector}
             value={current.uid}
             name="cities"
             items={data}
             onSelect={(value) => {
               setUid(value);
-              changeTheme(THEME[items.findIndex((item) => value === item.uid) as Themes]);
               console.log('Selection: ', value);
             }}
           />

@@ -1,8 +1,6 @@
 import { createContext, useState, ReactElement } from 'react';
 
-import { THEME, Themes } from './globals';
-
-type ThemeNames = (typeof THEME)[Themes];
+import { THEME, ThemeNames, Themes } from './globals';
 
 interface ThemeContextProps {
   theme: ThemeNames;

@@ -35,3 +35,5 @@ export const THEME = {
   [Themes.Retro]: 'retro',
   [Themes.Mono]: 'mono',
 } as const;
+
+export type ThemeNames = (typeof THEME)[Themes];

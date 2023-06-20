@@ -8,6 +8,9 @@
 }
 
 .main {
+  position: relative;
+  z-index: 10;
+
   display: flex;
   flex-flow: column;
   align-items: stretch;
