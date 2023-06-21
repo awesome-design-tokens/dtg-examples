@@ -55,7 +55,7 @@
 }
 
 @media (hover: hover) {
-  .item:not(.__selected):hover {
+  .item:not(.__selected):not(.__active):hover {
     background: var(--awsm-color-primary-tint);
     color: var(--awsm-color-primary-contrast);
     cursor: pointer;
@@ -66,4 +66,9 @@
   background: var(--awsm-color-primary-shade);
   color: var(--awsm-color-primary-contrast);
   cursor: default;
+}
+
+.__active {
+  background: var(--awsm-color-primary-tint);
+  color: var(--awsm-color-primary-contrast);
 }

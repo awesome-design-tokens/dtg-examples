@@ -4,14 +4,14 @@ import { Weather, weather } from '@dtg-examples/common-data';
 
 import { ComponentProps } from '../../types';
 
-export interface SelectorProps extends ComponentProps {
+export interface ListProps extends ComponentProps {
   name: string;
   value: string;
   items: Weather[];
   onSelect: (e: any) => void;
 }
 
-const Selector = (props: SelectorProps) => {
+const List = (props: ListProps) => {
   const { clsx, name, value, items, onSelect } = props;
 
   return (
@@ -51,4 +51,4 @@ const Selector = (props: SelectorProps) => {
   );
 };
 
-export { Selector };
+export { List };
