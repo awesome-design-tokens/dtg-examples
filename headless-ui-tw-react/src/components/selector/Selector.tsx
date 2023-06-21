@@ -1,8 +1,7 @@
 import { Fragment } from 'react';
 import { RadioGroup } from '@headlessui/react';
-import { Weather } from '@dtg-examples/common-data';
+import { Weather, weather } from '@dtg-examples/common-data';
 
-import { WEATHER } from '../../data/globals';
 import { ComponentProps } from '../../types';
 
 export interface SelectorProps extends ComponentProps {
@@ -42,7 +41,7 @@ const Selector = (props: SelectorProps) => {
                 {city}
               </RadioGroup.Label>
               <RadioGroup.Description className="m-0 text-sm">
-                {WEATHER[code]}: {temp}°C
+                {weather[code]}: {temp}°C
               </RadioGroup.Description>
             </div>
           )}
