@@ -1,5 +1,6 @@
 packages:
-  - "./headless-ui-react"
-  - "./headless-ui-tw-react"
-  - "./common-data"
-  - "./common-tokens"
+  - './common-data'
+  - './common-tokens'
+  - './headless-ui-react'
+  - './headless-ui-tw-react'
+  - './radix-ui'
