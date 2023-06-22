@@ -1,9 +1,8 @@
 import { useEffect, useState } from 'react';
 
-import {
-  Weather,
-  data,
-} from '@dtg-examples/common-data';
+import { Weather, data } from '@dtg-examples/common-data';
+
+import { Header } from '../components/header/Header';
 
 const App = () => {
   const [items, setItems] = useState<Weather[]>([]);
@@ -21,8 +20,10 @@ const App = () => {
 
   return (
     <div>
-      <h1>{current.city}</h1>
+      <Header />
 
+      <br />
+      <span>{current.city}</span>
       {items.map((item) => {
         return <div key={item.uid}>{item.city}</div>;
       })}

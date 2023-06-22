@@ -12,6 +12,8 @@
   "dependencies": {
     "@dtg-examples/common-data": "workspace:^",
     "@dtg-examples/common-tokens": "workspace:^",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
     "@radix-ui/react-radio-group": "^1.1.3",
     "@radix-ui/react-select": "^1.2.2",
     "react": "^18.2.0",
