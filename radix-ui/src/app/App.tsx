@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { css } from '@emotion/react';
 
 import { Weather, data } from '@dtg-examples/common-data';
 
@@ -19,14 +20,61 @@ const App = () => {
   if (loading) return <div>Loading...</div>;
 
   return (
-    <div>
+    <div
+      css={css`
+        width: 100%;
+
+        min-width: var(--min-width);
+        max-width: var(--max-width);
+
+        box-shadow: var(--awsm-shadow-medium);
+
+        @media (min-width: 780px) {
+          width: 60vw;
+        }
+      `}
+    >
       <Header />
 
-      <br />
-      <span>{current.city}</span>
-      {items.map((item) => {
-        return <div key={item.uid}>{item.city}</div>;
-      })}
+      <main
+        css={css`
+          position: relative;
+          z-index: 10;
+
+          display: flex;
+          flex-flow: column;
+          align-items: stretch;
+
+          @media (min-width: 780px) {
+            flex-flow: row;
+          }
+        `}
+      >
+        <aside
+          css={css`
+            flex: 1 1 40%;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: stretch;
+          `}
+        >
+          <span>{current.city}</span>
+        </aside>
+        <div
+          css={css`
+            flex: 1 1 60%;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: stretch;
+          `}
+        >
+          {items.map((item) => {
+            return <div key={item.uid}>{item.city}</div>;
+          })}
+        </div>
+      </main>
     </div>
   );
 };
