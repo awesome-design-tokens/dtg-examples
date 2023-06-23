@@ -4,6 +4,9 @@ import { css } from '@emotion/react';
 import { Weather, data } from '@dtg-examples/common-data';
 
 import { Header } from '../components/header/Header';
+import { Picture } from '../components/picture/Picture';
+import { Info } from '../components/info/Info';
+import { Report } from '../components/report/Report';
 
 const App = () => {
   const [items, setItems] = useState<Weather[]>([]);
@@ -59,7 +62,20 @@ const App = () => {
             justify-content: stretch;
           `}
         >
-          <span>{current.city}</span>
+          <Picture code={current.code} />
+          <Report
+            clsx={css`
+              flex: 1 0 auto;
+
+              display: flex;
+              flex-flow: column;
+              justify-content: center;
+            `}
+            status={current.status}
+            onReport={(data) => {
+              console.log('Report: ', data);
+            }}
+          />
         </aside>
         <div
           css={css`
@@ -70,6 +86,8 @@ const App = () => {
             justify-content: stretch;
           `}
         >
+          <Info city={current.city} code={current.code} temp={current.temp} />
+
           {items.map((item) => {
             return <div key={item.uid}>{item.city}</div>;
           })}

@@ -1,1 +1,19 @@
 @import '@dtg-examples/common-tokens/styles/index.css';
+
+h1,
+h2,
+h3 {
+  line-height: var(--awsm-line-height-tight);
+}
+
+h1 {
+  font-size: var(--awsm-font-size-xxl);
+}
+
+h2 {
+  font-size: var(--awsm-font-size-xl);
+}
+
+h3 {
+  font-size: var(--awsm-font-size-l);
+}
