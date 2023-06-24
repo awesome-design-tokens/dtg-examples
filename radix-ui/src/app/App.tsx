@@ -1,18 +1,31 @@
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { css } from '@emotion/react';
 
-import { Weather, data } from '@dtg-examples/common-data';
+import {
+  ThemeNames,
+  Themes,
+  Weather,
+  data,
+  themes,
+} from '@dtg-examples/common-data';
 
 import { Header } from '../components/header/Header';
 import { Picture } from '../components/picture/Picture';
 import { Info } from '../components/info/Info';
 import { Report } from '../components/report/Report';
 import { List } from '../components/list/List';
+import { Select } from '../components/select/Select';
+
+import { ThemeContext } from '../context/theme';
+
+const themesList = Object.values(themes);
 
 const App = () => {
   const [items, setItems] = useState<Weather[]>([]);
   const [uid, setUid] = useState(data[0].uid);
   const [loading, setLoading] = useState(true);
+
+  const { theme, changeTheme } = useContext(ThemeContext);
 
   useEffect(() => {
     setItems(data);
@@ -38,7 +51,19 @@ const App = () => {
         }
       `}
     >
-      <Header />
+      <Header>
+        <Select
+          name="themes"
+          items={themesList}
+          value={theme}
+          onSelect={(value) => {
+            changeTheme(
+              themes[themesList.indexOf(value as ThemeNames) as Themes]
+            );
+            console.log('Theme: ', value);
+          }}
+        />
+      </Header>
 
       <main
         css={css`

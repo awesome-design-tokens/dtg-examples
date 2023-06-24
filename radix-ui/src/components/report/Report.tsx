@@ -59,6 +59,7 @@ const Report = (props: ReportProps) => {
 
       <fieldset
         css={css`
+          margin: 0;
           margin-top: var(--awsm-space-100);
           padding: var(--awsm-space-100);
 
