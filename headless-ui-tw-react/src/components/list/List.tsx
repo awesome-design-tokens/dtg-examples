@@ -40,7 +40,7 @@ const List = (props: ListProps) => {
               >
                 {city}
               </RadioGroup.Label>
-              <RadioGroup.Description className="m-0 text-sm">
+              <RadioGroup.Description className="m-0 text-base">
                 {weather[code]}: {temp}°C
               </RadioGroup.Description>
             </div>

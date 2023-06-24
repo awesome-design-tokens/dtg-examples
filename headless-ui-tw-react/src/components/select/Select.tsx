@@ -19,7 +19,7 @@ const Select = (props: SelectProps) => {
         <Listbox.Button className="block w-full box-border p-3 h-form-base border-2 border-primary bg-primary hover:bg-primary-tint active:bg-primary-tone text-primary-contrast text-base leading-reset whitespace-nowrap uppercase cursor-pointer transition duration-instant">
           Current theme: {value.toLocaleUpperCase()}
         </Listbox.Button>
-        <Listbox.Options className="absolute box-border w-full max-h-screen-60 p-2 mt-2 bg-primary-contrast text-primary text-base overflow-y-auto shadow-md">
+        <Listbox.Options className="absolute box-border w-full max-h-screen-60 p-1 mt-2 bg-primary-contrast text-primary text-base overflow-y-auto shadow-md">
           {items.map((value) => (
             <Listbox.Option key={value} value={value} as={Fragment}>
               {({
