@@ -7,6 +7,7 @@ import { Header } from '../components/header/Header';
 import { Picture } from '../components/picture/Picture';
 import { Info } from '../components/info/Info';
 import { Report } from '../components/report/Report';
+import { List } from '../components/list/List';
 
 const App = () => {
   const [items, setItems] = useState<Weather[]>([]);
@@ -87,10 +88,22 @@ const App = () => {
           `}
         >
           <Info city={current.city} code={current.code} temp={current.temp} />
+          <List
+            clsx={css`
+              flex: 1 0 auto;
 
-          {items.map((item) => {
-            return <div key={item.uid}>{item.city}</div>;
-          })}
+              display: flex;
+              flex-flow: column;
+              justify-content: center;
+            `}
+            value={current.uid}
+            name="cities"
+            items={data}
+            onSelect={(value) => {
+              setUid(value);
+              console.log('Selection: ', value);
+            }}
+          />
         </div>
       </main>
     </div>
