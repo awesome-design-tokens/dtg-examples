@@ -131,8 +131,8 @@ export default {
       6: 'var(--awsm-space-150)',
       7: 'var(--awsm-space-175)',
       8: 'var(--awsm-space-200)',
-      12: 'calc(var(--awsm-space-100) * 3',
-      16: 'calc(var(--awsm-space-100) * 4',
+      12: 'calc(var(--awsm-space-100) * 3)',
+      16: 'calc(var(--awsm-space-100) * 4)',
     },
 
     // preserving original naming
