@@ -4,3 +4,4 @@ packages:
   - './headless-ui-react'
   - './headless-ui-tw-react'
   - './radix-ui'
+  - './mui-base-system'

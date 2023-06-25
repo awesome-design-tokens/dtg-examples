@@ -1,0 +1,51 @@
+.root {
+  width: 100%;
+
+  min-width: var(--min-width);
+  max-width: var(--max-width);
+
+  box-shadow: var(--awsm-shadow-medium);
+}
+
+.main {
+  position: relative;
+  z-index: 10;
+
+  display: flex;
+  flex-flow: column;
+  align-items: stretch;
+}
+
+@media (min-width: 780px) {
+  .root {
+    width: 60vw;
+  }
+
+  .main {
+    flex-flow: row;
+  }
+}
+
+.controls {
+  flex: 1 1 60%;
+}
+
+.data {
+  flex: 1 1 40%;
+}
+
+.controls,
+.data {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+}
+
+.selector,
+.report {
+  flex: 1 0 auto;
+
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}

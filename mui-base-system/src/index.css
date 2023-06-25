@@ -1,0 +1,26 @@
+@import '@dtg-examples/common-tokens/styles/index.css';
+
+h1,
+h2,
+h3 {
+  line-height: var(--awsm-line-height-tight);
+}
+
+h1 {
+  font-size: var(--awsm-font-size-xxl);
+}
+
+h2 {
+  font-size: var(--awsm-font-size-xl);
+}
+
+h3 {
+  font-size: var(--awsm-font-size-l);
+}
+
+html:root {
+  --mui-palette-primary-main: var(--awsm-color-primary);
+  --mui-palette-primary-light: var(--awsm-color-primary-tint);
+  --mui-palette-primary-dark: var(--awsm-color-primary-shade);
+  --mui-palette-primary-contrastText: var(--awsm-color-primary-contrast);
+}
