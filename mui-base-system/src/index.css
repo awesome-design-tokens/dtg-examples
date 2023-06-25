@@ -18,9 +18,62 @@ h3 {
   font-size: var(--awsm-font-size-l);
 }
 
+/* overriding MUI generated variables */
 html:root {
   --mui-palette-primary-main: var(--awsm-color-primary);
   --mui-palette-primary-light: var(--awsm-color-primary-tint);
   --mui-palette-primary-dark: var(--awsm-color-primary-shade);
+  --mui-palette-primary-tone: var(--awsm-color-primary-tone);
   --mui-palette-primary-contrastText: var(--awsm-color-primary-contrast);
+  --mui-palette-primary-mainChannel: var(--awsm-color-primary-rgb);
+
+  --mui-palette-secondary-main: var(--awsm-color-secondary);
+  --mui-palette-secondary-light: var(--awsm-color-secondary-tint);
+  --mui-palette-secondary-dark: var(--awsm-color-secondary-shade);
+  --mui-palette-secondary-tone: var(--awsm-color-secondary-tone);
+  --mui-palette-secondary-contrastText: var(--awsm-color-secondary-contrast);
+  --mui-palette-secondary-mainChannel: var(--awsm-color-secondary-rgb);
+
+  --mui-palette-accent-main: var(--awsm-color-accent);
+  --mui-palette-accent-light: var(--awsm-color-accent-tint);
+  --mui-palette-accent-dark: var(--awsm-color-accent-shade);
+  --mui-palette-accent-tone: var(--awsm-color-accent-tone);
+  --mui-palette-accent-contrastText: var(--awsm-color-accent-contrast);
+  --mui-palette-accent-mainChannel: var(--awsm-color-accent-rgb);
+
+  --mui-palette-gamma-000: var(--awsm-color-gamma-000);
+  --mui-palette-gamma-050: var(--awsm-color-gamma-050);
+  --mui-palette-gamma-100: var(--awsm-color-gamma-100);
+  --mui-palette-gamma-150: var(--awsm-color-gamma-150);
+  --mui-palette-gamma-200: var(--awsm-color-gamma-200);
+  --mui-palette-gamma-250: var(--awsm-color-gamma-250);
+  --mui-palette-gamma-300: var(--awsm-color-gamma-300);
+  --mui-palette-gamma-350: var(--awsm-color-gamma-350);
+  --mui-palette-gamma-400: var(--awsm-color-gamma-400);
+  --mui-palette-gamma-450: var(--awsm-color-gamma-450);
+  --mui-palette-gamma-500: var(--awsm-color-gamma-500);
+  --mui-palette-gamma-550: var(--awsm-color-gamma-550);
+  --mui-palette-gamma-600: var(--awsm-color-gamma-600);
+  --mui-palette-gamma-650: var(--awsm-color-gamma-650);
+  --mui-palette-gamma-700: var(--awsm-color-gamma-700);
+  --mui-palette-gamma-750: var(--awsm-color-gamma-750);
+  --mui-palette-gamma-800: var(--awsm-color-gamma-800);
+  --mui-palette-gamma-850: var(--awsm-color-gamma-850);
+  --mui-palette-gamma-900: var(--awsm-color-gamma-900);
+  --mui-palette-gamma-950: var(--awsm-color-gamma-950);
+
+  --mui-palette-base-light: var(--awsm-color-base-light);
+  --mui-palette-base-light-mainChannel: var(--awsm-color-base-light-rgb);
+  --mui-palette-base-dark: var(--awsm-color-base-dark);
+  --mui-palette-base-dark-mainChannel: var(--awsm-color-base-dark-rgb);
+
+  --mui-palette-contrast-light: var(--awsm-color-contrast-light);
+  --mui-palette-contrast-light-mainChannel: var(--awsm-color-contrast-light-rgb);
+  --mui-palette-contrast-dark: var(--awsm-color-contrast-dark);
+  --mui-palette-contrast-dark-mainChannel: var(--awsm-color-contrast-dark-rgb);
+
+  --mui-palette-common-background: var(--awsm-color-base-light);
+  --mui-palette-common-onBackground: var(--awsm-color-contrast-light);
+  --mui-palette-common-backgroundChannel: var(--awsm-color-base-light-rgb);
+  --mui-palette-common-onBackgroundChannel: var(--awsm-color-contrast-light-rgb);
 }

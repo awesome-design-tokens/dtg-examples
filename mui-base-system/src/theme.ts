@@ -17,6 +17,67 @@ DTGSpacingMap.set(12, 'calc(var(--awsm-space-100) * 3)');
 DTGSpacingMap.set(16, 'calc(var(--awsm-space-100) * 4)');
 
 const theme = extendTheme({
+  // ----------------------------------
+  // palette
+  // ----------------------------------
+  colorSchemes: {
+    light: {
+      palette: {
+        primary: {
+          main: '#000',
+          light: '#000',
+          dark: '#000',
+          tone: '#000',
+        },
+        secondary: {
+          main: '#000',
+          light: '#000',
+          dark: '#000',
+          tone: '#000',
+        },
+        accent: {
+          main: '#000',
+          light: '#000',
+          dark: '#000',
+          tone: '#000',
+        },
+        gamma: {
+          950: '#000',
+          900: '#000',
+          850: '#000',
+          800: '#000',
+          750: '#000',
+          700: '#000',
+          650: '#000',
+          600: '#000',
+          550: '#000',
+          500: '#000',
+          450: '#000',
+          400: '#000',
+          350: '#000',
+          300: '#000',
+          250: '#000',
+          200: '#000',
+          150: '#000',
+          100: '#000',
+          '050': '#000',
+          '000': '#000',
+        },
+        base: {
+          light: '#000',
+          dark: '#000',
+        },
+        contrast: {
+          light: '#000',
+          dark: '#000',
+        },
+      },
+    },
+  },
+
+  // ----------------------------------
+  // content
+  // ----------------------------------
   typography: {
     fontFamily: ['Play', 'Jura', '"Helvetica Neue"', 'sans-serif'].join(','),
     htmlFontSize: 16,
@@ -87,7 +148,14 @@ const theme = extendTheme({
     },
   },
 
+  // ----------------------------------
+  // space
+  // ----------------------------------
   spacing: (factor: any) => DTGSpacingMap.get(factor),
+
+  // ----------------------------------
+  // details
+  // ----------------------------------
 });
 
 export { theme };

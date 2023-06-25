@@ -18,8 +18,8 @@ const Header = (props: HeaderProps) => {
       sx={{
         py: 8,
         px: 4,
-        background: theme.vars.palette.primary.main,
-        color: theme.vars.palette.primary.contrastText,
+        background: theme.vars.palette.base.dark,
+        color: theme.vars.palette.contrast.dark,
       }}
     >
       <Box component="h1" sx={{ m: 0 }}>
