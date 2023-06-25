@@ -1,4 +1,5 @@
 import { ReactElement } from 'react';
+
 import { Box } from '@mui/system';
 
 import { ComponentProps } from '../../types';
@@ -15,13 +16,15 @@ const Header = (props: HeaderProps) => {
     <Box
       component="header"
       sx={{
-        py: 4,
-        px: 2,
+        py: 8,
+        px: 4,
         background: theme.vars.palette.primary.main,
         color: theme.vars.palette.primary.contrastText,
       }}
     >
-      <h1>Dystopian Weather</h1>
+      <Box component="h1" sx={{ m: 0 }}>
+        Dystopian Weather
+      </Box>
       <div>{children}</div>
     </Box>
   );
