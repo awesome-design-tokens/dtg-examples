@@ -2,7 +2,8 @@ import {
   PaletteColorOptions as MUISimplePaletteColorOptions,
   PaletteOptions as MUIPaletteOptions,
   Palette as MUIPalette,
-  TypeText as MUITypeText
+  TypeText as MUITypeText,
+  Duration as MUIDuration,
 } from '@mui/material';
 
 declare module '@mui/material/styles/createPalette' {
@@ -12,7 +13,6 @@ declare module '@mui/material/styles/createPalette' {
 
   interface GammaPaletteColorOptions {
     '000': string;
-    '050': string;
     '050': string;
     '100': string;
     '150': string;
@@ -58,5 +58,15 @@ declare module '@mui/material/styles/createPalette' {
     strong: string;
     subtle: string;
     accent: string;
+  }
+}
+
+declare module '@mui/material/styles/createTransitions' {
+  export interface Duration extends MUIDuration {
+    _instant?: string;
+    _short?: string;
+    _regular?: string;
+    _long?: string;
+    _extra?: string;
   }
 }

@@ -24,6 +24,8 @@ const theme = extendTheme({
   colorSchemes: {
     light: {
       palette: {
+        // here and further simply entering a placeholder
+        // theming occurs in css variables
         primary: {
           main: '#000',
           light: '#000',
@@ -164,6 +166,8 @@ const theme = extendTheme({
   // details
   // ----------------------------------
   shadows: [
+    // simplifying shadows
+    // similar can be done via variables
     'none',
     'var(--awsm-shadow-small)',
     'var(--awsm-shadow-small)',
@@ -190,6 +194,27 @@ const theme = extendTheme({
     'var(--awsm-shadow-large)',
     'var(--awsm-shadow-large)',
   ],
+
+  transitions: {
+    // values directly from DTG: Details/Duration
+    duration: {
+      shortest: 118,
+      shorter: 118,
+      short: 158,
+      standard: 210,
+      complex: 373,
+      enteringScreen: 280,
+      leavingScreen: 210,
+
+      // custom variables
+      _instant: 'var(--awsm-duration-instant)',
+      _short: 'var(--awsm-duration-short)',
+      _regular: 'var(--awsm-duration-regular)',
+      _long: 'var(--awsm-duration-long)',
+      _extra: 'var(--awsm-duration-extra)',
+    }
+  }
 });
+
 
 export { theme };
