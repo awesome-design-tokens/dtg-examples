@@ -20,6 +20,8 @@ const Header = (props: HeaderProps) => {
         px: 4,
         background: theme.vars.palette.base.dark,
         color: theme.vars.palette.contrast.dark,
+        borderBottom: `${theme.spacing(2)} solid`,
+        borderColor: `rgba(${theme.vars.palette.primary.mainChannel}, 0.5)`
       }}
     >
       <Box component="h1" sx={{ m: 0 }}>

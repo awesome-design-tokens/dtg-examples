@@ -68,12 +68,25 @@ html:root {
   --mui-palette-base-dark-mainChannel: var(--awsm-color-base-dark-rgb);
 
   --mui-palette-contrast-light: var(--awsm-color-contrast-light);
-  --mui-palette-contrast-light-mainChannel: var(--awsm-color-contrast-light-rgb);
+  --mui-palette-contrast-light-mainChannel: var(
+    --awsm-color-contrast-light-rgb
+  );
   --mui-palette-contrast-dark: var(--awsm-color-contrast-dark);
   --mui-palette-contrast-dark-mainChannel: var(--awsm-color-contrast-dark-rgb);
 
   --mui-palette-common-background: var(--awsm-color-base-light);
   --mui-palette-common-onBackground: var(--awsm-color-contrast-light);
   --mui-palette-common-backgroundChannel: var(--awsm-color-base-light-rgb);
-  --mui-palette-common-onBackgroundChannel: var(--awsm-color-contrast-light-rgb);
+  --mui-palette-common-onBackgroundChannel: var(
+    --awsm-color-contrast-light-rgb
+  );
+
+  --mui-palette-text-primary :var(--awsm-color-text-strong);
+  --mui-palette-text-secondary :var(--awsm-color-text-regular);
+  --mui-palette-text-disabled :var(--awsm-color-gamma-550);
+
+  --mui-palette-text-strong :var(--awsm-color-text-strong);
+  --mui-palette-text-regular :var(--awsm-color-text-regular);
+  --mui-palette-text-subtle :var(--awsm-color-text-subtle);
+  --mui-palette-text-accent :var(--awsm-color-text-accent);
 }

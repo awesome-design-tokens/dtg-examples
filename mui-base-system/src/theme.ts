@@ -16,6 +16,7 @@ DTGSpacingMap.set(8, 'var(--awsm-space-200)');
 DTGSpacingMap.set(12, 'calc(var(--awsm-space-100) * 3)');
 DTGSpacingMap.set(16, 'calc(var(--awsm-space-100) * 4)');
 
+
 const theme = extendTheme({
   // ----------------------------------
   // palette
@@ -71,6 +72,12 @@ const theme = extendTheme({
           light: '#000',
           dark: '#000',
         },
+        text: {
+          regular: '#000',
+          strong: '#000',
+          subtle: '#000',
+          accent: '#000'
+        }
       },
     },
   },
@@ -151,11 +158,38 @@ const theme = extendTheme({
   // ----------------------------------
   // space
   // ----------------------------------
-  spacing: (factor: any) => DTGSpacingMap.get(factor),
+  spacing: (factor: number) => DTGSpacingMap.get(factor),
 
   // ----------------------------------
   // details
   // ----------------------------------
+  shadows: [
+    'none',
+    'var(--awsm-shadow-small)',
+    'var(--awsm-shadow-small)',
+    'var(--awsm-shadow-small)',
+    'var(--awsm-shadow-small)',
+    'var(--awsm-shadow-small)',
+    'var(--awsm-shadow-small)',
+    'var(--awsm-shadow-small)',
+    'var(--awsm-shadow-small)',
+    'var(--awsm-shadow-medium)',
+    'var(--awsm-shadow-medium)',
+    'var(--awsm-shadow-medium)',
+    'var(--awsm-shadow-medium)',
+    'var(--awsm-shadow-medium)',
+    'var(--awsm-shadow-medium)',
+    'var(--awsm-shadow-medium)',
+    'var(--awsm-shadow-medium)',
+    'var(--awsm-shadow-large)',
+    'var(--awsm-shadow-large)',
+    'var(--awsm-shadow-large)',
+    'var(--awsm-shadow-large)',
+    'var(--awsm-shadow-large)',
+    'var(--awsm-shadow-large)',
+    'var(--awsm-shadow-large)',
+    'var(--awsm-shadow-large)',
+  ],
 });
 
 export { theme };

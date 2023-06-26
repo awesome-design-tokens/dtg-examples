@@ -2,6 +2,7 @@ import {
   PaletteColorOptions as MUISimplePaletteColorOptions,
   PaletteOptions as MUIPaletteOptions,
   Palette as MUIPalette,
+  TypeText as MUITypeText
 } from '@mui/material';
 
 declare module '@mui/material/styles/createPalette' {
@@ -50,5 +51,12 @@ declare module '@mui/material/styles/createPalette' {
     gamma: GammaPaletteColorOptions;
     base: CommonPaletteColorOptions;
     contrast: CommonPaletteColorOptions;
+  }
+
+  interface TypeText extends MUITypeText {
+    regular: string;
+    strong: string;
+    subtle: string;
+    accent: string;
   }
 }
