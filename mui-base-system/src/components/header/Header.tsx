@@ -18,10 +18,11 @@ const Header = (props: HeaderProps) => {
       sx={{
         py: 8,
         px: 4,
-        background: theme.vars.palette.base.dark,
+        bgcolor: theme.vars.palette.base.dark,
         color: theme.vars.palette.contrast.dark,
         borderBottom: `${theme.spacing(2)} solid`,
-        borderColor: `rgba(${theme.vars.palette.primary.mainChannel}, 0.5)`
+        borderColor: `rgba(${theme.vars.palette.primary.mainChannel}, 0.5)`,
+        borderRadius: theme.radius.medium
       }}
     >
       <Box component="h1" sx={{ m: 0 }}>

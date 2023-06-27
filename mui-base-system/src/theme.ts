@@ -16,7 +16,6 @@ DTGSpacingMap.set(8, 'var(--awsm-space-200)');
 DTGSpacingMap.set(12, 'calc(var(--awsm-space-100) * 3)');
 DTGSpacingMap.set(16, 'calc(var(--awsm-space-100) * 4)');
 
-
 const theme = extendTheme({
   // ----------------------------------
   // palette
@@ -78,8 +77,8 @@ const theme = extendTheme({
           regular: '#000',
           strong: '#000',
           subtle: '#000',
-          accent: '#000'
-        }
+          accent: '#000',
+        },
       },
     },
   },
@@ -195,6 +194,19 @@ const theme = extendTheme({
     'var(--awsm-shadow-large)',
   ],
 
+  shape: {
+    borderRadius: 4,
+  },
+
+  // custom field and variables
+  radius: {
+    small: 'var(--awsm-radius-small)',
+    medium: 'var(--awsm-radius-medium)',
+    large: 'var(--awsm-radius-large)',
+    round: 'var(--awsm-radius-round)',
+    pill: 'var(--awsm-radius-pill)',
+  },
+
   transitions: {
     // values directly from DTG: Details/Duration
     duration: {
@@ -205,16 +217,17 @@ const theme = extendTheme({
       complex: 373,
       enteringScreen: 280,
       leavingScreen: 210,
+    },
+  },
 
-      // custom variables
-      _instant: 'var(--awsm-duration-instant)',
-      _short: 'var(--awsm-duration-short)',
-      _regular: 'var(--awsm-duration-regular)',
-      _long: 'var(--awsm-duration-long)',
-      _extra: 'var(--awsm-duration-extra)',
-    }
-  }
+  // custom field and variables
+  duration: {
+    instant: 'var(--awsm-duration-instant)',
+    short: 'var(--awsm-duration-short)',
+    regular: 'var(--awsm-duration-regular)',
+    long: 'var(--awsm-duration-long)',
+    extra: 'var(--awsm-duration-extra)',
+  },
 });
-
 
 export { theme };

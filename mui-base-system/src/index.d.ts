@@ -4,9 +4,14 @@ import {
   Palette as MUIPalette,
   TypeText as MUITypeText,
   Duration as MUIDuration,
+  ThemeOptions as MUIThemeOptions,
+  Theme as MUITheme,
+  CssVarsThemeOptions as MUICssVarsThemeOptions,
 } from '@mui/material';
 
-declare module '@mui/material/styles/createPalette' {
+import { Shape as MUIShape } from '@mui/system';
+
+declare module '@mui/material/styles' {
   interface SimplePaletteColorOptions extends MUISimplePaletteColorOptions {
     tone: string;
   }
@@ -59,14 +64,40 @@ declare module '@mui/material/styles/createPalette' {
     subtle: string;
     accent: string;
   }
-}
 
-declare module '@mui/material/styles/createTransitions' {
-  export interface Duration extends MUIDuration {
-    _instant?: string;
-    _short?: string;
-    _regular?: string;
-    _long?: string;
-    _extra?: string;
+  interface CssVarsThemeOptions extends MUICssVarsThemeOptions {
+    radius: {
+      small: string;
+      medium: string;
+      large: string;
+      round: string;
+      pill: string;
+    };
+
+    duration: {
+      instant: string;
+      short: string;
+      regular: string;
+      long: string;
+      extra: string;
+    };
+  }
+
+  interface Theme extends MUITheme {
+    radius: {
+      small: string;
+      medium: string;
+      large: string;
+      round: string;
+      pill: string;
+    };
+
+    duration: {
+      instant: string;
+      short: string;
+      regular: string;
+      long: string;
+      extra: string;
+    };
   }
 }
