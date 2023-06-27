@@ -66,6 +66,12 @@ declare module '@mui/material/styles' {
   }
 
   interface CssVarsThemeOptions extends MUICssVarsThemeOptions {
+    shadow: {
+      small: string;
+      medium: string;
+      large: string;
+    };
+
     radius: {
       small: string;
       medium: string;
@@ -84,6 +90,12 @@ declare module '@mui/material/styles' {
   }
 
   interface Theme extends MUITheme {
+    shadow: {
+      small: string;
+      medium: string;
+      large: string;
+    };
+
     radius: {
       small: string;
       medium: string;

@@ -194,6 +194,12 @@ const theme = extendTheme({
     'var(--awsm-shadow-large)',
   ],
 
+  shadow: {
+    small: 'var(--awsm-shadow-small)',
+    medium: 'var(--awsm-shadow-medium)',
+    large: 'var(--awsm-shadow-large)',
+  },
+
   shape: {
     borderRadius: 4,
   },

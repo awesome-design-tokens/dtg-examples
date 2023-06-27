@@ -2,8 +2,11 @@ import { useEffect, useState } from 'react';
 
 import { Weather, data } from '@dtg-examples/common-data';
 
-import styles from './app.module.css';
 import { Header } from '../components/header/Header';
+import { Info } from '../components/info/Info';
+import { Picture } from '../components/picture/Picture';
+
+import styles from './app.module.css';
 
 const App = () => {
   const [items, setItems] = useState<Weather[]>([]);
@@ -22,7 +25,9 @@ const App = () => {
   return (
     <div className={styles.root}>
       <Header />
-      <h1>{current.city}</h1>
+      <Info city={current.city} code={current.code} temp={current.temp} />
+      <Picture code={current.code} />
+
       <ul>
         {items.map((item) => {
           return (
