@@ -1,13 +1,15 @@
 import { useEffect, useState } from 'react';
 
+import Box from '@mui/system/Box';
+import Stack from '@mui/system/Stack';
+
 import { Weather, data } from '@dtg-examples/common-data';
 
 import { Header } from '../components/header/Header';
 import { Info } from '../components/info/Info';
 import { Picture } from '../components/picture/Picture';
 import { Report } from '../components/report/Report';
-
-import styles from './app.module.css';
+import { theme } from '../theme';
 
 const App = () => {
   const [items, setItems] = useState<Weather[]>([]);
@@ -24,22 +26,69 @@ const App = () => {
   if (loading) return <div>Loading...</div>;
 
   return (
-    <div className={styles.root}>
-      <Header />
-      <Info city={current.city} code={current.code} temp={current.temp} />
-      <Picture code={current.code} />
-      <Report status={current.status} onReport={() => {}} />
+    <Box
+      sx={{
+        width: '100%',
+        minWidth: 'var(--min-width)',
+        maxWidth: 'var(--max-width)',
+        boxShadow: theme.shadow.medium,
 
-      <ul>
-        {items.map((item) => {
-          return (
-            <li key={item.uid}>
-              {item.city}: {item.temp}
-            </li>
-          );
-        })}
-      </ul>
-    </div>
+        [theme.breakpoints.up('md')]: {
+          width: '60vw',
+        },
+      }}
+    >
+      <Header />
+
+      <Stack
+        direction="row"
+        component="main"
+        sx={{
+          position: 'relative',
+          zIndex: 10,
+
+          [theme.breakpoints.down('md')]: {
+            flexFlow: 'column',
+            alignItems: 'stretch',
+          },
+        }}
+      >
+        <Stack
+          component="aside"
+          sx={{
+            [theme.breakpoints.up('md')]: {
+              flexBasis: '40%',
+            },
+          }}
+        >
+          <Picture code={current.code} />
+          <Report
+            status={current.status}
+            onReport={(data) => {
+              console.log('Report: ', data);
+            }}
+          />
+        </Stack>
+        <Stack
+                  sx={{
+                    [theme.breakpoints.up('md')]: {
+                      flexBasis: '60%',
+                    },
+                  }}>
+          <Info city={current.city} code={current.code} temp={current.temp} />
+
+          <ul>
+            {items.map((item) => {
+              return (
+                <li key={item.uid}>
+                  {item.city}: {item.temp}
+                </li>
+              );
+            })}
+          </ul>
+        </Stack>
+      </Stack>
+    </Box>
   );
 };
 

@@ -1,20 +1,3 @@
-.root {
-  width: 100%;
-
-  min-width: var(--min-width);
-  max-width: var(--max-width);
-
-  box-shadow: var(--awsm-shadow-medium);
-}
-
-.main {
-  position: relative;
-  z-index: 10;
-
-  display: flex;
-  flex-flow: column;
-  align-items: stretch;
-}
 
 @media (min-width: 780px) {
   .root {

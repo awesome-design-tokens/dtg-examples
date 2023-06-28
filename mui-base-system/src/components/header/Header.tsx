@@ -1,6 +1,7 @@
 import { ReactElement } from 'react';
 
-import { Box } from '@mui/system';
+import Box from '@mui/system/Box';
+import Stack from '@mui/system/Stack';
 
 import { ComponentProps } from '../../types';
 import { theme } from '../../theme';
@@ -13,8 +14,10 @@ const Header = (props: HeaderProps) => {
   const { children } = props;
 
   return (
-    <Box
+    <Stack
       component="header"
+      direction="row"
+      alignItems="center"
       sx={{
         position: 'relative',
         zIndex: 20,
@@ -26,11 +29,11 @@ const Header = (props: HeaderProps) => {
         borderColor: `rgba(${theme.vars.palette.primary.mainChannel}, 0.5)`
       }}
     >
-      <Box component="h1" sx={{ m: 0 }}>
+      <Box component="h1" sx={{ m: 0, flexGrow: 1}}>
         Dystopian Weather
       </Box>
       <div>{children}</div>
-    </Box>
+    </Stack>
   );
 };
 

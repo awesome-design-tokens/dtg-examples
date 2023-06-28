@@ -1,6 +1,6 @@
 import { WeatherCodes, images, weather } from '@dtg-examples/common-data';
 
-import { Box } from '@mui/system';
+import Box from '@mui/system/Box';
 
 import { theme } from '../../theme';
 

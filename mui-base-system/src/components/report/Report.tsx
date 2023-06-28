@@ -1,6 +1,7 @@
 import { KeyboardEvent, useState } from 'react';
 
-import { Box, styled } from '@mui/system';
+import Box from '@mui/system/Box';
+import styled from '@mui/system/styled';
 
 import Button from '@mui/material/Button';
 import MUIInput from '@mui/material/TextField';
@@ -64,7 +65,7 @@ const Report = (props: ReportProps) => {
       <Box
         component="h2"
         typography="h2"
-        sx={{ m: 0, color: theme.vars.palette.text.strong }}
+        sx={{ m: 0, mb: 2, color: theme.vars.palette.text.strong }}
       >
         Anomaly Status
       </Box>
@@ -104,6 +105,7 @@ const Report = (props: ReportProps) => {
                 theme.typography.button.fontSize
               } + 2 * ${theme.spacing(3)})`,
               borderRadius: 0,
+              whiteSpace: 'nowrap'
             }}
             onClick={handleClick}
             onKeyUp={handleKey}
