@@ -5,6 +5,7 @@ import { Weather, data } from '@dtg-examples/common-data';
 import { Header } from '../components/header/Header';
 import { Info } from '../components/info/Info';
 import { Picture } from '../components/picture/Picture';
+import { Report } from '../components/report/Report';
 
 import styles from './app.module.css';
 
@@ -27,6 +28,7 @@ const App = () => {
       <Header />
       <Info city={current.city} code={current.code} temp={current.temp} />
       <Picture code={current.code} />
+      <Report status={current.status} onReport={() => {}} />
 
       <ul>
         {items.map((item) => {
