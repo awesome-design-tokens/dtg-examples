@@ -62,6 +62,27 @@ html:root {
   --mui-palette-gamma-900: var(--awsm-color-gamma-900);
   --mui-palette-gamma-950: var(--awsm-color-gamma-950);
 
+  --mui-palette-gamma-A000: var(--awsm-color-gamma-000);
+  --mui-palette-gamma-A050: var(--awsm-color-gamma-050);
+  --mui-palette-gamma-A100: var(--awsm-color-gamma-100);
+  --mui-palette-gamma-A150: var(--awsm-color-gamma-150);
+  --mui-palette-gamma-A200: var(--awsm-color-gamma-200);
+  --mui-palette-gamma-A250: var(--awsm-color-gamma-250);
+  --mui-palette-gamma-A300: var(--awsm-color-gamma-300);
+  --mui-palette-gamma-A350: var(--awsm-color-gamma-350);
+  --mui-palette-gamma-A400: var(--awsm-color-gamma-400);
+  --mui-palette-gamma-A450: var(--awsm-color-gamma-450);
+  --mui-palette-gamma-A500: var(--awsm-color-gamma-500);
+  --mui-palette-gamma-A550: var(--awsm-color-gamma-550);
+  --mui-palette-gamma-A600: var(--awsm-color-gamma-600);
+  --mui-palette-gamma-A650: var(--awsm-color-gamma-650);
+  --mui-palette-gamma-A700: var(--awsm-color-gamma-700);
+  --mui-palette-gamma-A750: var(--awsm-color-gamma-750);
+  --mui-palette-gamma-A800: var(--awsm-color-gamma-800);
+  --mui-palette-gamma-A850: var(--awsm-color-gamma-850);
+  --mui-palette-gamma-A900: var(--awsm-color-gamma-900);
+  --mui-palette-gamma-A950: var(--awsm-color-gamma-950);
+
   --mui-palette-base-light: var(--awsm-color-base-light);
   --mui-palette-base-light-mainChannel: var(--awsm-color-base-light-rgb);
   --mui-palette-base-dark: var(--awsm-color-base-dark);

@@ -21,7 +21,7 @@ const Input = styled(MUIInput)({
     height: `calc(${theme.typography.button.fontSize} + 2 * ${theme.spacing(
       3
     )})`,
-    color: theme.vars.palette.gamma['150'],
+    color: theme.vars.palette.gamma.A150,
   },
 
   '& .MuiInputBase-root': {
@@ -78,7 +78,7 @@ const Report = (props: ReportProps) => {
           m: 0,
           mt: 4,
           p: 4,
-          bgcolor: theme.vars.palette.gamma['300'],
+          bgcolor: theme.vars.palette.gamma.A300,
           border: `${theme.spacing(0.5)} solid`,
           borderColor: `rgba(${theme.vars.palette.primary.mainChannel}, 0.5)`,
         }}

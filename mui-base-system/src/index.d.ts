@@ -37,6 +37,26 @@ declare module '@mui/material/styles' {
     '850': string;
     '900': string;
     '950': string;
+    A000?: string;
+    A050?: string;
+    A100?: string;
+    A150?: string;
+    A200?: string;
+    A250?: string;
+    A300?: string;
+    A350?: string;
+    A400?: string;
+    A450?: string;
+    A500?: string;
+    A550?: string;
+    A600?: string;
+    A650?: string;
+    A700?: string;
+    A750?: string;
+    A800?: string;
+    A850?: string;
+    A900?: string;
+    A950?: string;
   }
 
   interface CommonPaletteColorOptions {
