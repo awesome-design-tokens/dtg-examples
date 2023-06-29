@@ -1,20 +1,34 @@
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 
 import Box from '@mui/system/Box';
 import Stack from '@mui/system/Stack';
 
-import { Weather, data } from '@dtg-examples/common-data';
+import {
+  ThemeNames,
+  Themes,
+  Weather,
+  data,
+  themes,
+} from '@dtg-examples/common-data';
 
 import { Header } from '../components/header/Header';
 import { Info } from '../components/info/Info';
 import { Picture } from '../components/picture/Picture';
 import { Report } from '../components/report/Report';
+import { Select } from '../components/select/Select';
+
 import { theme } from '../theme';
+
+import { ThemeContext } from '../context/theme';
+
+const themesList = Object.values(themes);
 
 const App = () => {
   const [items, setItems] = useState<Weather[]>([]);
   const [uid, setUid] = useState(data[0].uid);
   const [loading, setLoading] = useState(true);
+
+  const { theme: appTheme, changeTheme } = useContext(ThemeContext);
 
   useEffect(() => {
     setItems(data);
@@ -38,7 +52,19 @@ const App = () => {
         },
       }}
     >
-      <Header />
+      <Header>
+        <Select
+          name="themes"
+          items={themesList}
+          value={appTheme}
+          onSelectValue={(value) => {
+            changeTheme(
+              themes[themesList.indexOf(value as ThemeNames) as Themes]
+            );
+            console.log('Theme: ', value);
+          }}
+        />
+      </Header>
 
       <Stack
         direction="row"
@@ -70,11 +96,12 @@ const App = () => {
           />
         </Stack>
         <Stack
-                  sx={{
-                    [theme.breakpoints.up('md')]: {
-                      flexBasis: '60%',
-                    },
-                  }}>
+          sx={{
+            [theme.breakpoints.up('md')]: {
+              flexBasis: '60%',
+            },
+          }}
+        >
           <Info city={current.city} code={current.code} temp={current.temp} />
 
           <ul>
