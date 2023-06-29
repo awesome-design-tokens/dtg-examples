@@ -1,9 +1,8 @@
 import * as Listbox from '@radix-ui/react-select';
-import { ComponentProps } from '../../types';
 
 import { css } from '@emotion/react';
 
-export interface SelectProps extends ComponentProps {
+export interface SelectProps {
   name: string;
   value: string;
   items: string[];

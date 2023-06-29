@@ -1,11 +1,9 @@
 import { Fragment } from 'react';
 import { Listbox } from '@headlessui/react';
 
-import { ComponentProps } from '../../types';
-
 import styles from './select.module.css';
 
-export interface SelectProps extends ComponentProps {
+export interface SelectProps {
   name: string;
   value: string;
   items: string[];

@@ -1,9 +1,7 @@
 import { Fragment } from 'react';
 import { Listbox } from '@headlessui/react';
 
-import { ComponentProps } from '../../types';
-
-export interface SelectProps extends ComponentProps {
+export interface SelectProps {
   name: string;
   value: string;
   items: string[];
