@@ -5,15 +5,15 @@ export interface SelectProps {
   name: string;
   value: string;
   items: string[];
-  onSelect: (v: string) => void;
+  onSelectValue: (v: string) => void;
 }
 
 const Select = (props: SelectProps) => {
-  const { name, value, items, onSelect } = props;
+  const { name, value, items, onSelectValue } = props;
 
   return (
     <div className="relative">
-      <Listbox value={value} onChange={onSelect} name={name}>
+      <Listbox value={value} onChange={onSelectValue} name={name}>
         <Listbox.Button className="block w-full box-border p-3 h-form-base border-2 border-primary bg-primary hover:bg-primary-tint active:bg-primary-tone text-primary-contrast text-base leading-reset whitespace-nowrap uppercase cursor-pointer transition duration-instant">
           Current theme: {value.toLocaleUpperCase()}
         </Listbox.Button>

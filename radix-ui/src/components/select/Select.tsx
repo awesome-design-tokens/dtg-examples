@@ -6,15 +6,15 @@ export interface SelectProps {
   name: string;
   value: string;
   items: string[];
-  onSelect: (v: string) => void;
+  onSelectValue: (v: string) => void;
 }
 
 const Select = (props: SelectProps) => {
-  const { name, value, items, onSelect } = props;
+  const { name, value, items, onSelectValue } = props;
 
   return (
     <div>
-      <Listbox.Root value={value} onValueChange={onSelect} name={name}>
+      <Listbox.Root value={value} onValueChange={onSelectValue} name={name}>
         <Listbox.Trigger
           css={css`
             display: block;

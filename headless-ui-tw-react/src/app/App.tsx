@@ -42,7 +42,7 @@ const App = () => {
           name="themes"
           items={themesList}
           value={theme}
-          onSelect={(value) => {
+          onSelectValue={(value) => {
             changeTheme(
               themes[themesList.indexOf(value as ThemeNames) as Themes]
             );

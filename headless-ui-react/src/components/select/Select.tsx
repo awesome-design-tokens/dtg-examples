@@ -7,15 +7,15 @@ export interface SelectProps {
   name: string;
   value: string;
   items: string[];
-  onSelect: (v: string) => void;
+  onSelectValue: (v: string) => void;
 }
 
 const Select = (props: SelectProps) => {
-  const { name, value, items, onSelect } = props;
+  const { name, value, items, onSelectValue } = props;
 
   return (
     <div className={styles.root}>
-      <Listbox value={value} onChange={onSelect} name={name}>
+      <Listbox value={value} onChange={onSelectValue} name={name}>
         <Listbox.Button className={styles.trigger}>
           Current theme: {value.toLocaleUpperCase()}
         </Listbox.Button>
