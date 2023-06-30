@@ -1,11 +1,13 @@
 import Box from '@mui/system/Box';
+import styled from '@mui/system/styled';
+
+import MUIButton from '@mui/material/Button';
 
 import MUISelect, { SelectProps as MUISelectProps } from '@mui/base/Select';
 import MUIOption from '@mui/base/Option';
-import MUIButton from '@mui/material/Button';
 import MUIPopper from '@mui/base/Popper';
 
-import styled from '@mui/system/styled';
+import { theme } from '../../theme';
 
 export interface SelectProps extends MUISelectProps<string, false> {
   name: string;
@@ -14,30 +16,72 @@ export interface SelectProps extends MUISelectProps<string, false> {
   onSelectValue: (v: string) => void;
 }
 
-const ListBox = styled('ul')({
-  position: 'relative',
-});
-
 const ListTrigger = styled(MUIButton)({
-  p: 3,
+  padding: theme.spacing(3),
+  height: `calc(${theme.typography.button.fontSize} + 2 * ${theme.spacing(3)})`,
+  borderRadius: 0,
+  whiteSpace: 'nowrap',
 });
 
 ListTrigger.defaultProps = {
   variant: 'contained',
 };
 
-const ListOptions = styled(MUIPopper)({
-  backgroundColor: 'grey',
+const ListDropDown = styled(MUIPopper)({
   zIndex: 100,
+  boxSizing: 'border-box',
+  width: '100%',
+  maxHeight: '60vh',
+  backgroundColor: theme.vars.palette.primary.contrastText,
+  color: theme.vars.palette.primary.main,
+  fontSize: theme.typography.body1.fontSize,
+  overflowY: 'auto',
+  boxShadow: theme.shadow.medium,
+});
+
+ListDropDown.defaultProps = {
+  disablePortal: true,
+};
+
+const ListBox = styled('ul')({
+  boxSizing: 'border-box',
+  position: 'relative',
+  width: '100%',
+  padding: theme.spacing(1),
+  margin: 0,
+});
+
+const ListOption = styled(MUIOption)({
+  padding: theme.spacing(2),
+  listStyle: 'none',
+  userSelect: 'none',
+
+  ['&.Mui-selected']: {
+    background: theme.vars.palette.primary.dark,
+    color: theme.vars.palette.primary.contrastText,
+    cursor: 'default',
+  },
+
+  ['&.MuiOption-highlighted:not(.Mui-selected)']: {
+    background: theme.vars.palette.primary.light,
+    color: theme.vars.palette.primary.contrastText,
+    cursor: 'default',
+  },
+
+  [':hover:not(.Mui-selected):not(.MuiOption-highlighted)']: {
+    background: theme.vars.palette.primary.light,
+    color: theme.vars.palette.primary.contrastText,
+    cursor: 'pointer',
+  },
 });
 
 const Select = (props: SelectProps) => {
   const { name, value, items, onSelectValue } = props;
 
   const slots: MUISelectProps<string, false>['slots'] = {
-    listbox: ListBox,
     root: ListTrigger,
-    popper: ListOptions,
+    popper: ListDropDown,
+    listbox: ListBox,
   };
 
   return (
@@ -58,34 +102,10 @@ const Select = (props: SelectProps) => {
         slots={slots}
       >
         {items.map((value) => (
-          <MUIOption value={value} key={value}>
+          <ListOption value={value} key={value}>
             {value}
-          </MUIOption>
+          </ListOption>
         ))}
-
-        {/* <Listbox.Button className={styles.trigger}
-        </Listbox.Button>
-        <Listbox.Options className={styles.list}>
-          {items.map((value) => (
-            <Listbox.Option key={value} value={value} as={Fragment}>
-              {({
-                active,
-                selected,
-              }: {
-                active: boolean;
-                selected: boolean;
-              }) => (
-                <li
-                  className={`${styles.item} ${
-                    selected ? styles.__selected : active ? styles.__active : ''
-                  }`}
-                >
-                  {value}
-                </li>
-              )}
-            </Listbox.Option>
-          ))}
-        </Listbox.Options> */}
       </MUISelect>
     </Box>
   );

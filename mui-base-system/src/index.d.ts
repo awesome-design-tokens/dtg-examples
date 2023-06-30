@@ -10,7 +10,6 @@ import {
 } from '@mui/material';
 
 import { Shape as MUIShape } from '@mui/system';
-
 declare module '@mui/material/styles' {
   interface SimplePaletteColorOptions extends MUISimplePaletteColorOptions {
     tone: string;
@@ -65,13 +64,6 @@ declare module '@mui/material/styles' {
   }
 
   interface PaletteOptions extends MUIPaletteOptions {
-    accent: SimplePaletteColorOptions;
-    gamma: GammaPaletteColorOptions;
-    base: CommonPaletteColorOptions;
-    contrast: CommonPaletteColorOptions;
-  }
-
-  interface Palette extends MUIPalette {
     accent: SimplePaletteColorOptions;
     gamma: GammaPaletteColorOptions;
     base: CommonPaletteColorOptions;
