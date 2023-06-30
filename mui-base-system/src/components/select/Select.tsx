@@ -20,6 +20,8 @@ const ListTrigger = styled(MUIButton)({
   padding: theme.spacing(3),
   height: `calc(${theme.typography.button.fontSize} + 2 * ${theme.spacing(3)})`,
   borderRadius: 0,
+  border: `${theme.spacing(0.5)} solid`,
+  borderColor: theme.vars.palette.primary.main,
   whiteSpace: 'nowrap',
 });
 

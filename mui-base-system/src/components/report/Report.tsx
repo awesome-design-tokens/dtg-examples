@@ -104,6 +104,8 @@ const Report = (props: ReportProps) => {
               height: `calc(${
                 theme.typography.button.fontSize
               } + 2 * ${theme.spacing(3)})`,
+              border: `${theme.spacing(0.5)} solid`,
+              borderColor: theme.vars.palette.primary.main,
               borderRadius: 0,
               whiteSpace: 'nowrap'
             }}
