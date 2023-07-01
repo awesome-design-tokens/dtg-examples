@@ -90,6 +90,12 @@ const App = () => {
         >
           <Picture code={current.code} />
           <Report
+            clsx={{
+              flex: '1 0 auto',
+              display: 'flex',
+              flexFlow: 'column',
+              justifyContent: 'center',
+            }}
             status={current.status}
             onReport={(data) => {
               console.log('Report: ', data);
@@ -105,7 +111,7 @@ const App = () => {
         >
           <Info city={current.city} code={current.code} temp={current.temp} />
           <List
-            grow={true}
+            grow
             value={current.uid}
             name="cities"
             items={data}

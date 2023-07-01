@@ -14,11 +14,11 @@ import { theme } from '../../theme';
 import { ComponentProps } from '../../types';
 
 export interface ListProps extends ComponentProps {
-  grow: boolean;
   name: string;
   value: string;
   items: Weather[];
   onSelectValue: (v: string) => void;
+  grow?: boolean;
 }
 
 // workaround to hide the trigger element
@@ -93,7 +93,10 @@ const SelectRoot = styled(MUISelect, {
   shouldForwardProp: (prop) => prop !== 'grow',
 })(({ grow }) => ({
   ['~ .MuiSelect-popper']: {
-    flex: grow ? '1 1 auto' : 'initial',
+    flex: grow && '1 0 auto',
+    display: grow && 'flex',
+    flexFlow: grow && 'column',
+    justifyContent: grow && 'center',
   },
 })) as (
   props: MUISelectProps<string, false> & Pick<ListProps, 'grow'>
