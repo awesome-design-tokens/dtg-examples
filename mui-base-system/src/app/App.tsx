@@ -16,6 +16,7 @@ import { Info } from '../components/info/Info';
 import { Picture } from '../components/picture/Picture';
 import { Report } from '../components/report/Report';
 import { Select } from '../components/select/Select';
+import { List } from '../components/list/List';
 
 import { theme } from '../theme';
 
@@ -103,16 +104,15 @@ const App = () => {
           }}
         >
           <Info city={current.city} code={current.code} temp={current.temp} />
-
-          <ul>
-            {items.map((item) => {
-              return (
-                <li key={item.uid}>
-                  {item.city}: {item.temp}
-                </li>
-              );
-            })}
-          </ul>
+          <List
+            value={current.uid}
+            name="cities"
+            items={data}
+            onSelectValue={(value) => {
+              setUid(value);
+              console.log('Selection: ', value);
+            }}
+          />
         </Stack>
       </Stack>
     </Box>

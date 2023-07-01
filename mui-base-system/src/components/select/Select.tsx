@@ -102,7 +102,6 @@ const Select = (props: SelectProps) => {
           onSelectValue(value as string);
         }}
         slots={slots}
-        listboxOpen
       >
         {items.map((value) => (
           <ListOption value={value} key={value}>

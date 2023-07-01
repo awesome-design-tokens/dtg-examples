@@ -127,17 +127,17 @@ const theme = extendTheme({
 
     h4: {
       fontSize: 'var(--awsm-font-size-n)',
-      lineHeight: 'var(--awsm-line-height-tight)',
+      lineHeight: 'var(--awsm-line-height-regular)',
     },
 
     h5: {
       fontSize: 'var(--awsm-font-size-n)',
-      lineHeight: 'var(--awsm-line-height-tight)',
+      lineHeight: 'var(--awsm-line-height-regular)',
     },
 
     h6: {
       fontSize: 'var(--awsm-font-size-n)',
-      lineHeight: 'var(--awsm-line-height-tight)',
+      lineHeight: 'var(--awsm-line-height-regular)',
     },
 
     body1: {

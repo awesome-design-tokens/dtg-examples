@@ -107,7 +107,7 @@ const Report = (props: ReportProps) => {
               border: `${theme.spacing(0.5)} solid`,
               borderColor: theme.vars.palette.primary.main,
               borderRadius: 0,
-              whiteSpace: 'nowrap'
+              whiteSpace: 'nowrap',
             }}
             onClick={handleClick}
             onKeyUp={handleKey}
