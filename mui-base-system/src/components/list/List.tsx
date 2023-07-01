@@ -14,6 +14,7 @@ import { theme } from '../../theme';
 import { ComponentProps } from '../../types';
 
 export interface ListProps extends ComponentProps {
+  grow: boolean;
   name: string;
   value: string;
   items: Weather[];
@@ -42,9 +43,6 @@ const ListDropDown = styled(MUIPopper)({
   width: '100%',
   display: 'flex',
   flexFlow: 'column',
-
-  // temporary
-  flex: '1 1 auto',
 });
 
 ListDropDown.defaultProps = {
@@ -91,8 +89,18 @@ const ListOption = styled(MUIOption)({
   },
 });
 
+const SelectRoot = styled(MUISelect, {
+  shouldForwardProp: (prop) => prop !== 'grow',
+})(({ grow }) => ({
+  ['~ .MuiSelect-popper']: {
+    flex: grow ? '1 1 auto' : 'initial',
+  },
+})) as (
+  props: MUISelectProps<string, false> & Pick<ListProps, 'grow'>
+) => JSX.Element;
+
 const List = (props: ListProps) => {
-  const { clsx, name, value, items, onSelectValue } = props;
+  const { name, value, items, onSelectValue, grow } = props;
 
   const slots: MUISelectProps<string, false>['slots'] = {
     root: ListTrigger,
@@ -101,7 +109,8 @@ const List = (props: ListProps) => {
   };
 
   return (
-    <MUISelect
+    <SelectRoot
+      grow={grow}
       name={name}
       value={value}
       renderValue={() => (
@@ -115,13 +124,18 @@ const List = (props: ListProps) => {
     >
       {items.map(({ uid, city, code, temp }) => (
         <ListOption value={uid} key={uid}>
-          <Box typography="h3" sx={{ lineHeight: theme.typography.body1.lineHeight }}>{city}</Box>
+          <Box
+            typography="h3"
+            sx={{ lineHeight: theme.typography.body1.lineHeight }}
+          >
+            {city}
+          </Box>
           <Box typography="body1">
             {weather[code]}: {temp}°C
           </Box>
         </ListOption>
       ))}
-    </MUISelect>
+    </SelectRoot>
   );
 };
 

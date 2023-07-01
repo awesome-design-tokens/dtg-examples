@@ -22,6 +22,8 @@ const Input = styled(MUIInput)({
     height: `calc(${theme.typography.button.fontSize} + 2 * ${theme.spacing(
       3
     )})`,
+    border: `${theme.spacing(0.5)} solid`,
+    borderColor: theme.vars.palette.gamma.A400,
     color: theme.vars.palette.gamma.A150,
   },
 

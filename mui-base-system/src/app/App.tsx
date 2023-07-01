@@ -105,6 +105,7 @@ const App = () => {
         >
           <Info city={current.city} code={current.code} temp={current.temp} />
           <List
+            grow={true}
             value={current.uid}
             name="cities"
             items={data}
