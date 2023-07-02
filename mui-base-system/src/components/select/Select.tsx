@@ -23,6 +23,9 @@ const ListTrigger = styled(MUIButton)({
   border: `${theme.spacing(0.5)} solid`,
   borderColor: theme.vars.palette.primary.main,
   whiteSpace: 'nowrap',
+  transition: theme.transitions.create(['all'], {
+    duration: theme.transitions.duration.shortest,
+  }),
 });
 
 ListTrigger.defaultProps = {
@@ -57,6 +60,9 @@ const ListOption = styled(MUIOption)({
   padding: theme.spacing(2),
   listStyle: 'none',
   userSelect: 'none',
+  transition: theme.transitions.create(['all'], {
+    duration: theme.transitions.duration.shortest,
+  }),
 
   ['&.Mui-selected']: {
     background: theme.vars.palette.primary.dark,

@@ -30,6 +30,17 @@ const Input = styled(MUIInput)({
   '& .MuiInputBase-root': {
     backgroundColor: theme.vars.palette.gamma['850'],
     borderRadius: 0,
+    transition: theme.transitions.create(['all'], {
+      duration: theme.transitions.duration.shortest,
+    }),
+  },
+
+  '&:hover .MuiInputBase-root': {
+    backgroundColor: theme.vars.palette.gamma['850'],
+  },
+
+  '.MuiInputBase-root.Mui-focused': {
+    backgroundColor: theme.vars.palette.gamma['900'],
   },
 });
 
@@ -110,6 +121,9 @@ const Report = (props: ReportProps) => {
               borderColor: theme.vars.palette.primary.main,
               borderRadius: 0,
               whiteSpace: 'nowrap',
+              transition: theme.transitions.create(['all'], {
+                duration: theme.transitions.duration.shortest,
+              }),
             }}
             onClick={handleClick}
             onKeyUp={handleKey}

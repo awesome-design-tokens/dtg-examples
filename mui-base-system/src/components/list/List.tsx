@@ -68,6 +68,9 @@ const ListOption = styled(MUIOption)({
   listStyle: 'none',
   background: theme.vars.palette.secondary.main,
   color: theme.vars.palette.secondary.contrastText,
+  transition: theme.transitions.create(['all'], {
+    duration: theme.transitions.duration.short,
+  }),
 
   ['&.Mui-selected']: {
     zIndex: '1',
