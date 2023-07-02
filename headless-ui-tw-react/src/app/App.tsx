@@ -69,7 +69,7 @@ const App = () => {
             value={current.uid}
             name="cities"
             items={data}
-            onSelect={(value) => {
+            onSelectValue={(value) => {
               setUid(value);
               console.log('Selection: ', value);
             }}

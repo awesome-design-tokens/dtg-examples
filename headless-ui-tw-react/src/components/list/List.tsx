@@ -8,16 +8,16 @@ export interface ListProps extends ComponentProps {
   name: string;
   value: string;
   items: Weather[];
-  onSelect: (e: any) => void;
+  onSelectValue: (e: any) => void;
 }
 
 const List = (props: ListProps) => {
-  const { clsx, name, value, items, onSelect } = props;
+  const { clsx, name, value, items, onSelectValue } = props;
 
   return (
     <RadioGroup
       value={value}
-      onChange={onSelect}
+      onChange={onSelectValue}
       name={name}
       className={`p-4 flex flex-col justify-items-stretch justify-stretch bg-gamma-300 ${
         clsx ? ' ' + clsx : ''
