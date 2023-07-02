@@ -26,6 +26,11 @@ const ListTrigger = styled(MUIButton)({
   transition: theme.transitions.create(['all'], {
     duration: theme.transitions.duration.shortest,
   }),
+
+  [':focus-visible']: {
+    outline: theme.focus.style,
+    outlineOffset: theme.focus.offset,
+  }
 });
 
 ListTrigger.defaultProps = {
@@ -81,6 +86,11 @@ const ListOption = styled(MUIOption)({
     color: theme.vars.palette.primary.contrastText,
     cursor: 'pointer',
   },
+
+  ['&.MuiOption-highlighted']: {
+    outline: theme.focus.style,
+    outlineOffset: theme.focus.offset,
+  }
 });
 
 const Select = (props: SelectProps) => {

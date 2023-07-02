@@ -41,6 +41,8 @@ const Input = styled(MUIInput)({
 
   '.MuiInputBase-root.Mui-focused': {
     backgroundColor: theme.vars.palette.gamma['900'],
+    outline: theme.focus.style,
+    outlineOffset: theme.focus.offset,
   },
 });
 
@@ -124,6 +126,11 @@ const Report = (props: ReportProps) => {
               transition: theme.transitions.create(['all'], {
                 duration: theme.transitions.duration.shortest,
               }),
+  
+              [':focus-visible']: {
+                outline: theme.focus.style,
+                outlineOffset: theme.focus.offset,
+              }
             }}
             onClick={handleClick}
             onKeyUp={handleKey}

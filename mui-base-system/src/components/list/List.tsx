@@ -21,7 +21,7 @@ export interface ListProps extends ComponentProps {
   grow?: boolean;
 }
 
-// workaround to hide the trigger element
+// NOTE: workaround, not sustainable solution for demo purposes only
 const ListTrigger = styled(MUIButton)({
   position: 'absolute',
   width: '100%',
@@ -60,6 +60,13 @@ const ListBox = styled('ul')({
   padding: theme.spacing(4),
   margin: 0,
   backgroundColor: theme.vars.palette.gamma.A300,
+
+  // NOTE: workaround, not sustainable solution for demo purposes only
+  ['.Mui-focusVisible:not([aria-activedescendant]) + .MuiSelect-popper &']: {
+    outline: theme.focus.style,
+    outlineOffset: theme.focus.offset,
+    ['--focus-color']: theme.vars.palette.primary.main,
+  },
 });
 
 const ListOption = styled(MUIOption)({
@@ -73,7 +80,6 @@ const ListOption = styled(MUIOption)({
   }),
 
   ['&.Mui-selected']: {
-    zIndex: '1',
     background: theme.vars.palette.secondary.contrastText,
     color: theme.vars.palette.secondary.main,
     cursor: 'default',
@@ -89,6 +95,13 @@ const ListOption = styled(MUIOption)({
     background: theme.vars.palette.secondary.light,
     color: theme.vars.palette.secondary.contrastText,
     cursor: 'pointer',
+  },
+
+  ['&.MuiOption-highlighted']: {
+    zIndex: '1',
+    outline: theme.focus.style,
+    outlineOffset: theme.focus.offset,
+    ['--focus-color']: theme.vars.palette.primary.main,
   },
 });
 

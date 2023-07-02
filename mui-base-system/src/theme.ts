@@ -254,6 +254,12 @@ const theme = extendTheme({
     long: 'var(--awsm-duration-long)',
     extra: 'var(--awsm-duration-extra)',
   },
+
+  focus: {
+    style: 'var(--awsm-space-025) solid var(--focus-color)',
+    color: 'var(--focus-color)',
+    offset: '1px'
+  }
 });
 
 export { theme };

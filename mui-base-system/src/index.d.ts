@@ -70,7 +70,7 @@ declare module '@mui/material/styles' {
     base: CommonPaletteColorOptions;
     contrast: CommonPaletteColorOptions;
   }
-  
+
   interface Palette extends MUIPalette {
     accent: SimplePaletteColorOptions;
     gamma: GammaPaletteColorOptions;
@@ -107,6 +107,12 @@ declare module '@mui/material/styles' {
       long: string;
       extra: string;
     };
+
+    focus: {
+      style: string;
+      color: string;
+      offset: string;
+    };
   }
 
   interface Theme extends MUITheme {
@@ -130,6 +136,12 @@ declare module '@mui/material/styles' {
       regular: string;
       long: string;
       extra: string;
+    };
+
+    focus: {
+      style: string;
+      color: string;
+      offset: string;
     };
   }
 }
