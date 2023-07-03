@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "@chakra-ui/react": "^2.7.1",
+    "@dtg-examples/common-data": "workspace:^",
+    "@dtg-examples/common-tokens": "workspace:^",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "framer-motion": "^10.12.18",
