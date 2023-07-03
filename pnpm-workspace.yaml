@@ -3,5 +3,6 @@ packages:
   - './common-tokens'
   - './headless-ui-react'
   - './headless-ui-tw-react'
-  - './radix-ui'
+  - './radix-ui-react'
   - './mui-base-system'
+  - './chakra-ui-react'
