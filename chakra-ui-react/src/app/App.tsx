@@ -19,7 +19,7 @@ const App = () => {
 
   return (
     <div>
-      <Box px={4} py={2} as="header" bg="primary.default">
+      <Box px={4} py={2} as="header" bg="primary.default" color="primary.contrast">
         <h1>
           {current.city}: {current.temp}
         </h1>

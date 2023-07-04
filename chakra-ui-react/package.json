@@ -7,10 +7,13 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "theme": "chakra-cli tokens src/theme.ts"
   },
   "dependencies": {
+    "@chakra-ui/cli": "^2.4.1",
     "@chakra-ui/react": "^2.7.1",
+    "@chakra-ui/styled-system": "^2.9.1",
     "@dtg-examples/common-data": "workspace:^",
     "@dtg-examples/common-tokens": "workspace:^",
     "@emotion/react": "^11.11.1",

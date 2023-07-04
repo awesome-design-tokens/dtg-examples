@@ -8,6 +8,7 @@ const theme = extendTheme({
       tint: 'var(--awsm-color-primary-tint)',
       shade: 'var(--awsm-color-primary-shade)',
       tone: 'var(--awsm-color-primary-tone)',
+      contrast: 'var(--awsm-color-primary-contrast)'
     }
   }
  })
