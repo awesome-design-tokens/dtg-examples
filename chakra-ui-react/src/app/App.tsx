@@ -1,9 +1,7 @@
 import { useEffect, useState } from 'react';
 
-import {
-  Weather,
-  data,
-} from '@dtg-examples/common-data';
+import { Weather, data } from '@dtg-examples/common-data';
+import { Box } from '@chakra-ui/react';
 
 const App = () => {
   const [items, setItems] = useState<Weather[]>([]);
@@ -21,11 +19,11 @@ const App = () => {
 
   return (
     <div>
-      <header>
+      <Box px={4} py={2} as="header" bg="primary.default">
         <h1>
           {current.city}: {current.temp}
         </h1>
-      </header>
+      </Box>
 
       <section>
         <ul>
