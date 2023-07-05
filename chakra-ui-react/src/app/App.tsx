@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react';
 
-import { Weather, data } from '@dtg-examples/common-data';
 import { Box } from '@chakra-ui/react';
+import { Weather, data } from '@dtg-examples/common-data';
+
+import { Header } from '../components/header/Header';
 
 const App = () => {
   const [items, setItems] = useState<Weather[]>([]);
@@ -19,13 +21,14 @@ const App = () => {
 
   return (
     <div>
-      <Box px={4} py={2} as="header" bg="primary.default" color="primary.contrast">
-        <h1>
-          {current.city}: {current.temp}
-        </h1>
-      </Box>
+      <Header>
+        <span>Select</span>
+      </Header>
 
       <section>
+        <div>
+        {current.city}: {current.temp}
+        </div>
         <ul>
           {items.map((item) => (
             <li key={item.uid}>
