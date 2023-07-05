@@ -9,6 +9,16 @@ const theme = extendTheme({
       shade: 'var(--awsm-color-primary-shade)',
       tone: 'var(--awsm-color-primary-tone)',
       contrast: 'var(--awsm-color-primary-contrast)',
+
+      alpha10: 'rgba(var(--awsm-color-primary-rgb), 0.1)',
+      alpha20: 'rgba(var(--awsm-color-primary-rgb), 0.2)',
+      alpha30: 'rgba(var(--awsm-color-primary-rgb), 0.3)',
+      alpha40: 'rgba(var(--awsm-color-primary-rgb), 0.4)',
+      alpha50: 'rgba(var(--awsm-color-primary-rgb), 0.5)',
+      alpha60: 'rgba(var(--awsm-color-primary-rgb), 0.6)',
+      alpha70: 'rgba(var(--awsm-color-primary-rgb), 0.7)',
+      alpha80: 'rgba(var(--awsm-color-primary-rgb), 0.8)',
+      alpha90: 'rgba(var(--awsm-color-primary-rgb), 0.9)',
     },
     secondary: {
       default: 'var(--awsm-color-secondary)',
@@ -16,6 +26,16 @@ const theme = extendTheme({
       shade: 'var(--awsm-color-secondary-shade)',
       tone: 'var(--awsm-color-secondary-tone)',
       contrast: 'var(--awsm-color-secondary-contrast)',
+
+      alpha10: 'rgba(var(--awsm-color-secondary-rgb), 0.1)',
+      alpha20: 'rgba(var(--awsm-color-secondary-rgb), 0.2)',
+      alpha30: 'rgba(var(--awsm-color-secondary-rgb), 0.3)',
+      alpha40: 'rgba(var(--awsm-color-secondary-rgb), 0.4)',
+      alpha50: 'rgba(var(--awsm-color-secondary-rgb), 0.5)',
+      alpha60: 'rgba(var(--awsm-color-secondary-rgb), 0.6)',
+      alpha70: 'rgba(var(--awsm-color-secondary-rgb), 0.7)',
+      alpha80: 'rgba(var(--awsm-color-secondary-rgb), 0.8)',
+      alpha90: 'rgba(var(--awsm-color-secondary-rgb), 0.9)',
     },
     accent: {
       default: 'var(--awsm-color-accent)',
@@ -23,6 +43,16 @@ const theme = extendTheme({
       shade: 'var(--awsm-color-accent-shade)',
       tone: 'var(--awsm-color-accent-tone)',
       contrast: 'var(--awsm-color-accent-contrast)',
+
+      alpha10: 'rgba(var(--awsm-color-accent-rgb), 0.1)',
+      alpha20: 'rgba(var(--awsm-color-accent-rgb), 0.2)',
+      alpha30: 'rgba(var(--awsm-color-accent-rgb), 0.3)',
+      alpha40: 'rgba(var(--awsm-color-accent-rgb), 0.4)',
+      alpha50: 'rgba(var(--awsm-color-accent-rgb), 0.5)',
+      alpha60: 'rgba(var(--awsm-color-accent-rgb), 0.6)',
+      alpha70: 'rgba(var(--awsm-color-accent-rgb), 0.7)',
+      alpha80: 'rgba(var(--awsm-color-accent-rgb), 0.8)',
+      alpha90: 'rgba(var(--awsm-color-accent-rgb), 0.9)',
     },
     gamma: {
       950: 'var(--awsm-color-gamma-950)',
@@ -144,6 +174,15 @@ const theme = extendTheme({
       ['ultra-slow']: null,
     },
   },
+
+  borders: {
+    px: '1px solid',
+    0: 'none',
+    0.5: 'var(--awsm-space-012) solid',
+    1: 'var(--awsm-space-025) solid',
+    1.5: 'calc(var(--awsm-space-025) + var(--awsm-space-012)) solid',
+    2: 'var(--awsm-space-050) solid',
+  }
 });
 
 export { theme };
