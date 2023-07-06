@@ -8,7 +8,7 @@ const Picture = (props: PictureProps) => {
   const { code } = props;
 
   return (
-    <figure className="m-0 p-0 bg-base-dark text-contrast-dark leading-reset">
+    <figure className="m-0 p-0 leading-reset">
       <img
         className="w-full object-cover"
         src={images[code]}

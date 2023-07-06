@@ -17,8 +17,6 @@ const Picture = (props: PictureProps) => {
       sx={{
         m: 0,
         p: 0,
-        bgcolor: theme.vars.palette.base.dark,
-        color: theme.vars.palette.contrast.dark,
         lineHeight: 0,
       }}
     >

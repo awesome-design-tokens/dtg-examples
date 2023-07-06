@@ -14,9 +14,6 @@ const Picture = (props: PictureProps) => {
         margin: 0;
         padding: 0;
 
-        background: var(--awsm-color-base-dark);
-        color: var(--awsm-color-contrast-dark);
-
         line-height: 0;
       `}
     >
