@@ -138,6 +138,11 @@ const theme = extendTheme({
     16: 'calc(var(--awsm-space-100) * 4)',
   },
 
+  // custom field
+  sizes: {
+    formBase: 'calc(var(--awsm-font-size-n) + 2 * var(--awsm-space-075))',
+  },
+
   // preserving original naming
   radii: {
     none: '0',
@@ -182,7 +187,7 @@ const theme = extendTheme({
     1: 'var(--awsm-space-025) solid',
     1.5: 'calc(var(--awsm-space-025) + var(--awsm-space-012)) solid',
     2: 'var(--awsm-space-050) solid',
-  }
+  },
 });
 
 export { theme };
