@@ -1,5 +1,7 @@
 import { useContext, useEffect, useState } from 'react';
 
+import { Box, Flex } from '@chakra-ui/react';
+
 import {
   ThemeNames,
   Themes,
@@ -35,7 +37,12 @@ const App = () => {
   if (loading) return <div>Loading...</div>;
 
   return (
-    <div>
+    <Box
+      w={{ base: '100%', md: '60vw' }}
+      minW="var(--min-width)"
+      maxW="var(--max-width)"
+      boxShadow="md"
+    >
       <Header>
         <Select
           name="themes"
@@ -50,24 +57,29 @@ const App = () => {
         />
       </Header>
 
-      <Info city={current.city} code={current.code} temp={current.temp} />
+      <Flex direction={{ base: 'column', md: 'row' }}>
+        <Flex direction="column" flexBasis="40%">
+          <Picture code={current.code} />
+          <Report
+            status={current.status}
+            onReport={(data) => {
+              console.log('Report: ', data);
+            }}
+          />
+        </Flex>
 
-      <Picture code={current.code} />
-      <Report
-        status={current.status}
-        onReport={(data) => {
-          console.log('Report: ', data);
-        }}
-      />
-
-      <ul>
-        {items.map((item) => (
-          <li key={item.uid}>
-            {item.city}, {item.uid}
-          </li>
-        ))}
-      </ul>
-    </div>
+        <Flex direction="column" flexBasis="60%">
+          <Info city={current.city} code={current.code} temp={current.temp} />
+          <ul>
+            {items.map((item) => (
+              <li key={item.uid}>
+                {item.city}, {item.uid}
+              </li>
+            ))}
+          </ul>
+        </Flex>
+      </Flex>
+    </Box>
   );
 };
 
