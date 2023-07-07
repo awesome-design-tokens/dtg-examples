@@ -17,6 +17,7 @@ import { Report } from '../components/report/Report';
 import { Select } from '../components/select/Select';
 
 import { ThemeContext } from '../context/theme';
+import { List } from '../components/list/List';
 
 const themesList = Object.values(themes);
 
@@ -70,13 +71,15 @@ const App = () => {
 
         <Flex direction="column" flexBasis="60%">
           <Info city={current.city} code={current.code} temp={current.temp} />
-          <ul>
-            {items.map((item) => (
-              <li key={item.uid}>
-                {item.city}, {item.uid}
-              </li>
-            ))}
-          </ul>
+          <List
+            value={current.uid}
+            name="cities"
+            items={data}
+            onSelectValue={(value) => {
+              setUid(value);
+              console.log('Selection: ', value);
+            }}
+          />
         </Flex>
       </Flex>
     </Box>

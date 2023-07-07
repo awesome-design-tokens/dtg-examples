@@ -24,7 +24,6 @@ const Select = (props: SelectProps) => {
         variant="solid"
         height="formBase"
         width="100%"
-        mt={4}
         p={3}
         color="primary.contrast"
         bg="primary.default"
