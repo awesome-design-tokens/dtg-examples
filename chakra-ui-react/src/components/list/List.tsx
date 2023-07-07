@@ -25,6 +25,7 @@ const List = (props: ListProps) => {
         const uid = items[idx].uid;
         onSelectValue(uid);
       }}
+      __css={clsx}
     >
       <TabList
         display="flex"

@@ -59,9 +59,15 @@ const App = () => {
       </Header>
 
       <Flex direction={{ base: 'column', md: 'row' }}>
-        <Flex direction="column" flexBasis="40%">
+        <Flex direction="column" flexBasis="40%" justifyContent="stretch">
           <Picture code={current.code} />
           <Report
+            clsx={{
+              flexGrow: 1,
+              display: 'flex',
+              flexFlow: 'column',
+              justifyContent: 'center',
+            }}
             status={current.status}
             onReport={(data) => {
               console.log('Report: ', data);
@@ -69,9 +75,15 @@ const App = () => {
           />
         </Flex>
 
-        <Flex direction="column" flexBasis="60%">
+        <Flex direction="column" flexBasis="60%" justifyContent="stretch">
           <Info city={current.city} code={current.code} temp={current.temp} />
           <List
+            clsx={{
+              flexGrow: 1,
+              display: 'flex',
+              flexFlow: 'column',
+              justifyContent: 'center',
+            }}
             value={current.uid}
             name="cities"
             items={data}

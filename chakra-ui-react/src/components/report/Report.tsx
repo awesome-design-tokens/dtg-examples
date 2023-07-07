@@ -29,7 +29,7 @@ const Report = (props: ReportProps) => {
   };
 
   return (
-    <Box as="section" p={4} bg="base.dark" color="text.regular">
+    <Box as="section" p={4} bg="base.dark" color="text.regular" __css={clsx}>
       <Heading
         as="h2"
         fontSize="xl"
