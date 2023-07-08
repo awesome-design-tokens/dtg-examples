@@ -3,6 +3,7 @@ import { KeyboardEvent, useState } from 'react';
 import { Box, Button, Heading, Input } from '@chakra-ui/react';
 
 import { ComponentProps } from '../../types';
+import { theme } from '../../theme';
 
 export interface ReportProps extends ComponentProps {
   status: string;
@@ -69,10 +70,16 @@ const Report = (props: ReportProps) => {
             color="gamma.150"
             fontSize="md"
             lineHeight="reset"
-            transitionDuration="instant"
+            transitionProperty="all"
+            transitionTimingFunction="ease-out"
+            transitionDuration="faster"
             _hover={{}}
             _focus={{
               bg: 'gamma.900',
+            }}
+            _focusVisible={{
+              outline: theme.focus.style,
+              outlineOffset: theme.focus.outline,
             }}
           />
         </div>
@@ -95,12 +102,18 @@ const Report = (props: ReportProps) => {
             fontSize="md"
             lineHeight="reset"
             cursor="pointer"
+            transitionProperty="all"
+            transitionTimingFunction="ease-out"
             transitionDuration="faster"
             _hover={{
               bg: 'primary.tint',
             }}
             _active={{
               bg: 'primary.tone',
+            }}
+            _focusVisible={{
+              outline: theme.focus.style,
+              outlineOffset: theme.focus.outline,
             }}
           >
             Report Anomaly

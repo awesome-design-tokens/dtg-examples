@@ -3,6 +3,7 @@ import { Box, Tab, TabList, Tabs } from '@chakra-ui/react';
 import { Weather, weather } from '@dtg-examples/common-data';
 
 import { ComponentProps } from '../../types';
+import { theme } from '../../theme';
 
 export interface ListProps extends ComponentProps {
   name: string;
@@ -53,6 +54,8 @@ const List = (props: ListProps) => {
               lineHeight="base"
               textAlign="initial"
               fontSize="md"
+              transitionProperty="all"
+              transitionTimingFunction="ease-out"
               transitionDuration="faster"
               _hover={{
                 bg: 'secondary.tint',
@@ -62,6 +65,11 @@ const List = (props: ListProps) => {
                 color: 'secondary.default',
                 bg: 'secondary.contrast',
               }}
+              _focusVisible={{
+                outline: theme.focus.style,
+                outlineOffset: theme.focus.outline,
+              }}
+              sx={{ '--focus-color': theme.colors.primary.default }}
             >
               <Box fontSize="lg">{city}</Box>
               <Box>

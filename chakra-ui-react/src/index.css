@@ -18,10 +18,6 @@ h3 {
   font-size: var(--awsm-font-size-l);
 }
 
-/*  --chakra-transition-duration- 50ms;
-    --chakra-transition-duration-ms;
-    --chakra-transition-duration-;
-    --chakra-transition-duration-ms;
-    --chakra-transition-duration-;
-    --chakra-transition-duration-ms;
-    --chakra-transition-duration- 500ms; */
+:root {
+  --focus-style: var(--awsm-space-025) solid var(--focus-color);
+}

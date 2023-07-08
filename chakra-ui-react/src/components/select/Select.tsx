@@ -7,6 +7,8 @@ import {
   MenuOptionGroup,
 } from '@chakra-ui/react';
 
+import { theme } from '../../theme';
+
 export interface SelectProps {
   name: string;
   value: string;
@@ -35,12 +37,18 @@ const Select = (props: SelectProps) => {
         fontSize="md"
         lineHeight="reset"
         cursor="pointer"
+        transitionProperty="all"
+        transitionTimingFunction="ease-out"
         transitionDuration="faster"
         _hover={{
           bg: 'primary.tint',
         }}
         _active={{
           bg: 'primary.tone',
+        }}
+        _focusVisible={{
+          outline: 'var(--focus-style)',
+          outlineOffset: 1,
         }}
       >
         Current theme: {value.toLocaleUpperCase()}
@@ -75,6 +83,8 @@ const Select = (props: SelectProps) => {
               lineHeight="base"
               border={0}
               bg="none"
+              transitionProperty="all"
+              transitionTimingFunction="ease-out"
               transitionDuration="faster"
               _hover={{
                 bg: 'primary.tint',
@@ -89,6 +99,10 @@ const Select = (props: SelectProps) => {
               _focus={{
                 bg: 'primary.tint',
                 color: 'primary.contrast',
+              }}
+              _focusVisible={{
+                outline: theme.focus.style,
+                outlineOffset: theme.focus.outline,
               }}
             >
               {value}

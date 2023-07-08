@@ -188,6 +188,11 @@ const theme = extendTheme({
     1.5: 'calc(var(--awsm-space-025) + var(--awsm-space-012)) solid',
     2: 'var(--awsm-space-050) solid',
   },
+
+  focus: {
+    style: 'var(--awsm-space-025) solid var(--focus-color)',
+    offset: '1px'
+  },
 });
 
 export { theme };
