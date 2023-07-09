@@ -3,7 +3,7 @@
   font-style: normal;
   font-display: swap;
   font-weight: 400;
-  src: url('../fonts/Play-Regular.ttf') format('truetype');
+  src: url('../fonts/Play-Regular.woff') format('woff');
 }
 
 html {

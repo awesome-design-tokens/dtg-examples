@@ -163,7 +163,7 @@ const theme = extendTheme({
     lg: 'var(--awsm-shadow-large)',
     xl: null,
     '2xl': null,
-    outline: 'var(--awsm-shadow-small)', // focus ring TODO
+    outline: null,
     none: 'none',
   },
 
@@ -189,6 +189,8 @@ const theme = extendTheme({
     2: 'var(--awsm-space-050) solid',
   },
 
+  // custom field
+  // only used via theme obj
   focus: {
     style: 'var(--awsm-space-025) solid var(--focus-color)',
     offset: '1px'
