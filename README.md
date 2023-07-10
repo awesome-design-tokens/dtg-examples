@@ -25,13 +25,37 @@ There are 2 shared projects that are used by all projects:
 
 ### [CSS Modules + Headless UI](./headless-ui-react/)
 
+Most of application is built with plain JSX and styled with CSS modules.  
+Design tokens are used in the form of CSS variables.  
+Headless UI is used in 2 components without any additional setup.
+
+
 ### [Headless UI + Tailwind CSS](./headless-ui-tw-react/)
+
+Since Headless UI works great with Tailwind CSS (naturally),  
+this app implementation takes the latter for a spin.  
+Design tokens work via Tailwind theme, Headless UI components are used more or less the same.
+
 
 ### [Radix UI + Emotion](./radix-ui-react/)
 
+These two technologies are used merely for sake of brevity and demonstration.  
+Emotion can be used quite differently, but since it's very much CSS like,  
+design tokens are also in CSS variables format. Radix UI is used to build 2 components.
+
+
 ### [MUI + Base UI + MUI System](./mui-base-system/)
 
+Using all MUI technologies is certainly not mandatory, quite the opposite.  
+Design tokens are implemented via MUI theme layer with experimental CSS variables context.  
+Despite recommended approach, for demonstration `sx` property is used dominantly.  
+All components are built with MUI entities.
+
 ### [Chakra UI](./chakra-ui-react/)
+
+Theming Chakra UI is a very similar dev experience to theming Tailwind CSS.  
+All components are build with the framework entities.  
+Design tokens work via Chakra UI theme properties with exception of a couple custom fields.
 
 
 ## 🌐 Links and References
