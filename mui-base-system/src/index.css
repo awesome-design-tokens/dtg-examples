@@ -102,12 +102,12 @@ html:root {
     --awsm-color-contrast-light-rgb
   );
 
-  --mui-palette-text-primary :var(--awsm-color-text-strong);
-  --mui-palette-text-secondary :var(--awsm-color-text-regular);
-  --mui-palette-text-disabled :var(--awsm-color-gamma-550);
+  --mui-palette-text-primary: var(--awsm-color-text-strong);
+  --mui-palette-text-secondary: var(--awsm-color-text-regular);
+  --mui-palette-text-disabled: var(--awsm-color-gamma-550);
 
-  --mui-palette-text-strong :var(--awsm-color-text-strong);
-  --mui-palette-text-regular :var(--awsm-color-text-regular);
-  --mui-palette-text-subtle :var(--awsm-color-text-subtle);
-  --mui-palette-text-accent :var(--awsm-color-text-accent);
+  --mui-palette-text-strong: var(--awsm-color-text-strong);
+  --mui-palette-text-regular: var(--awsm-color-text-regular);
+  --mui-palette-text-subtle: var(--awsm-color-text-subtle);
+  --mui-palette-text-accent: var(--awsm-color-text-accent);
 }

@@ -24,7 +24,7 @@ const Header = (props: HeaderProps) => {
       borderBottom={2}
       borderColor="primary.alpha50"
     >
-      <Heading as="h1" fontSize="2xl" lineHeight="short"  m={0} flex="1 1 auto">
+      <Heading as="h1" fontSize="2xl" lineHeight="short" m={0} flex="1 1 auto">
         Dystopian Weather
       </Heading>
       <div>{children}</div>
