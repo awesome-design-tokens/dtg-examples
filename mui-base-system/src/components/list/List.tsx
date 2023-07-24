@@ -132,9 +132,6 @@ const List = (props: ListProps) => {
       grow={grow}
       name={name}
       value={value}
-      renderValue={() => (
-        <span>Current theme: {value.toLocaleUpperCase()}</span>
-      )}
       onChange={(_, value) => {
         onSelectValue(value as string);
       }}
